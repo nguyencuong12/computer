@@ -1,0 +1,13 @@
+import logo from "./logo.svg";
+import menu from "./menu.svg";
+import close from "./close.svg";
+import discount from "./Discount.svg";
+import robot from "./robot.png";
+import shield from "./Shield.svg";
+import star from "./Star.svg";
+import send from "./Send.svg";
+import apple from "./apple.svg";
+import bill from "./bill.png";
+import google from "./google.svg";
+import card from "./card.png";
+export { logo, menu, close, discount, robot, shield, star, send, apple, bill, google, card };
