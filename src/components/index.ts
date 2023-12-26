@@ -11,7 +11,13 @@ import LandingPage from "./LandingPage";
 import BillingComponent from "./Billing";
 import CardDealComponent from "./CardDeal";
 import SeoComponent from "./SeoComponent";
-
+import FeedbackCard from "./FeedbackCard";
+import Testimonials from "./Testimonials";
+import Clients from "./Clients";
+import SearchForm from "./SearchForm";
+import SearchItemResult from "./SearchItemResult";
+import Banner from "./Banner";
+import Categories from "./Categories";
 export {
   CTA,
   NavbarComponent,
@@ -25,4 +31,11 @@ export {
   BillingComponent,
   CardDealComponent,
   SeoComponent,
+  FeedbackCard,
+  Testimonials,
+  Clients,
+  SearchForm,
+  SearchItemResult,
+  Banner,
+  Categories
 };

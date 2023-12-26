@@ -19,12 +19,17 @@ module.exports = {
     },
     extend: {
       colors: { 
-        gradient1:"gradient-to-r from-green-400 to-blue-500",
+  
+
         primary: "#00040f",
         secondary: "#00f6ff",
+        red:"red",
+        gray:"#797979",
         dimWhite: "rgba(255, 255, 255, 0.7)",
         dimBlue: "rgba(9, 151, 124, 0.1)",
+        searchForm:"rgba(255,255,255,0.2)",
       },
+
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

@@ -1,14 +1,17 @@
 import React from "react";
-import { HeroComponent, StatsComponent, BusinessComponent, BillingComponent, CardDealComponent } from "@/components";
+import { Banner, HeroComponent, StatsComponent, BusinessComponent, BillingComponent, CardDealComponent, Testimonials, Clients } from "@/components";
 
 const LandingPage = () => {
   return (
     <div>
+      <Banner />
       <HeroComponent />
       <StatsComponent />
       <BusinessComponent />
       <BillingComponent />
       <CardDealComponent />
+      <Testimonials />
+      <Clients />
     </div>
   );
 };
