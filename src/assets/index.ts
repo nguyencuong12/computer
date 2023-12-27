@@ -34,8 +34,10 @@ import ram from "./ram.png";
 import mouse from "./mouse.png";
 import keyboard from "./keyboard.png";
 import laptop from "./laptop.png";
+import case_computer from "./case_computer.png";
 
 export {
+  case_computer,
   cpu,
   computer,
   moniter,

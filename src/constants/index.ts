@@ -20,6 +20,7 @@ import {
   mouse,
   keyboard,
   laptop,
+  case_computer,
 } from "@/assets";
 
 export const categories = [
@@ -30,26 +31,17 @@ export const categories = [
     link: "/man-hinh",
     children: [
       {
+        id: "man-hinh-hang",
         childrenItem: [
           {
-            title: "Màn hình theo hãng",
-            link: "/helloworld",
+            id: "Màn hình ASUS",
+            title: "Màn hình ASUS",
+            link: "/man-hinh-asus",
           },
           {
-            title: "Màn hình theo hãng",
-            link: "#",
-          },
-          {
-            title: "Màn hình theo hãng",
-            link: "#",
-          },
-        ],
-      },
-      {
-        childrenItem: [
-          {
-            title: "Tần số quét",
-            link: "#",
+            id: "Màn hình LG",
+            title: "Màn hình LG",
+            link: "/man-hinh-lg",
           },
         ],
       },
@@ -59,165 +51,121 @@ export const categories = [
     id: "Máy bộ",
     title: "Máy bộ",
     icon: computer,
-    link: "#",
+    link: "/may-bo",
     children: [
       {
+        id: "maybo",
         childrenItem: [
           {
-            title: "Màn hình theo hãng",
-            link: "#",
-          },
-        ],
-      },
-      {
-        childrenItem: [
-          {
-            title: "Tần số quét",
-            link: "#",
+            id: "maybocustom",
+            title: "Máy bộ",
+            link: "/may-bo",
           },
         ],
       },
     ],
   },
   {
-    id: "Laptop",
-    title: "Laptop",
-    icon: laptop,
-    link: "#",
+    id: "Case-Nguồn",
+    title: "Case-Nguồn",
+    icon: case_computer,
+    link: "/case-nguon",
     children: [
       {
+        id: "Case Theo Hãng",
         childrenItem: [
           {
-            title: "Màn hình theo hãng",
-            link: "#",
+            id: "case-theo-hang",
+            title: "Case Theo Hãng",
+            link: "/case-theo-hang",
+          },
+          {
+            id: "case-asus",
+            title: "Case Asus",
+            link: "/case-asus",
+          },
+          {
+            id: "case-sama",
+            title: "Case Sama",
+            link: "/case-sama",
+          },
+          {
+            id: "case-corsair",
+            title: "Case Corsair",
+            link: "/case-corsair",
           },
         ],
       },
       {
+        id: "Case Theo Giá",
         childrenItem: [
           {
-            title: "Tần số quét",
-            link: "#",
+            id: "case-duoi-1tr",
+            title: "Case Dưới 1 Triệu",
+            link: "/case-duoi-1tr",
+          },
+          {
+            id: "case-tu-1tr-2tr",
+            title: "Case Từ 1 Triệu Đến 2 Triệu",
+            link: "/case-tu-1tr-2tr",
           },
         ],
       },
     ],
   },
   {
-    id: "CPU",
-    title: "CPU",
-    icon: cpu,
-    link: "#",
-    children: [
-      {
-        childrenItem: [
-          {
-            title: "Màn hình theo hãng",
-            link: "#",
-          },
-        ],
-      },
-      {
-        childrenItem: [
-          {
-            title: "Tần số quét",
-            link: "#",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "Ram",
-    title: "Ram",
+    id: "RAM Và Ổ Cứng",
+    title: "RAM Và Ổ Cứng",
     icon: ram,
-    link: "#",
+    link: "/ram",
     children: [
       {
+        id: "Dung lượng ram",
         childrenItem: [
           {
-            title: "Màn hình theo hãng",
-            link: "#",
+            id: "dung-luong-ram",
+            title: "Dung lượng ram",
+            link: "/ram-pc",
+          },
+          {
+            id: "ram-8gb",
+            title: "Ram-8gb",
+            link: "/ram-pc/ram-8gb",
           },
         ],
       },
       {
+        id: "Hãng ram",
         childrenItem: [
           {
-            title: "Tần số quét",
-            link: "#",
+            id: "hang-ram",
+            title: "Hãng ram",
+            link: "/ram-pc",
           },
-        ],
-      },
-    ],
-  },
-  {
-    id: "Chuột",
-    title: "Chuột",
-    icon: mouse,
-    link: "#",
-    children: [
-      {
-        childrenItem: [
           {
-            title: "Màn hình theo hãng",
-            link: "#",
+            id: "Ram Kingston",
+            title: "Ram Kingston",
+            link: "/ram-pc/kingston",
           },
         ],
       },
       {
+        id: "Loại ram",
         childrenItem: [
           {
-            title: "Tần số quét",
-            link: "#",
+            id: "loai-ram",
+            title: "Loại ram",
+            link: "/ram-pc",
           },
-        ],
-      },
-    ],
-  },
-  {
-    id: "Bàn phím",
-    title: "Bàn phím",
-    icon: keyboard,
-    link: "#",
-    children: [
-      {
-        childrenItem: [
           {
-            title: "Màn hình theo hãng",
-            link: "#",
+            id: "DDR4",
+            title: "DDR4",
+            link: "/ram-pc/ddr4",
           },
-        ],
-      },
-      {
-        childrenItem: [
           {
-            title: "Tần số quét",
-            link: "#",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "Tai nghe",
-    title: "Tai nghe",
-    icon: headphone,
-    link: "#",
-    children: [
-      {
-        childrenItem: [
-          {
-            title: "Màn hình theo hãng",
-            link: "#",
-          },
-        ],
-      },
-      {
-        childrenItem: [
-          {
-            title: "Tần số quét",
-            link: "#",
+            id: "DDR5",
+            title: "DDR5",
+            link: "/ram-pc/ddr5",
           },
         ],
       },

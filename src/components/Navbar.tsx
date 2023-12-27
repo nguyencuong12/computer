@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { navLinks } from "@/constants";
 import { logo, menu, close, shopping } from "@/assets";
 import { SearchForm } from "@/components";
+import Link from "next/link";
 
 const NavbarComponent = () => {
   const [active, setActive] = useState("Home");
@@ -10,7 +11,9 @@ const NavbarComponent = () => {
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar ">
-      <img src={logo.src} alt="Log 123" className="w-[120px] h-[32px]"></img>
+      <Link href="/">
+        <img src={logo.src} alt="Log 123" className="w-[120px] h-[32px]"></img>
+      </Link>
       <SearchForm />
       <ul className="list-none sm:flex hidden justify-end items-center flex-1 ">
         {/* {navLinks.map((nav,index))} */}
@@ -27,9 +30,9 @@ const NavbarComponent = () => {
       </ul>
       <div className="ml-4 relative border-2 hidden md:block">
         <span className="dot absolute left-4 bottom-4">2</span>
-        <a href="#">
+        <Link href="gio-hang">
           <img src={shopping.src} className="max-w-[25px]"></img>
-        </a>
+        </Link>
       </div>
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <img
@@ -56,9 +59,9 @@ const NavbarComponent = () => {
           ))}
           <div className="relative mt-4 ">
             <span className="dot absolute left-4 bottom-4">2</span>
-            <a href="#">
+            <Link href="gio-hang">
               <img src={shopping.src} className="max-w-[25px]"></img>
-            </a>
+            </Link>
           </div>
         </ul>
       </div>

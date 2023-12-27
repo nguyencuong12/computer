@@ -7,31 +7,32 @@ export const metadata = {
 import styles from "./style";
 
 import { NavbarComponent, FooterComponent, BodyComponent } from "@/components";
-
+import Provider from "./provider";
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        <div className="bg-primary w-full overflow-hidden">
-          <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-            <div className={`${styles.boxWidth}`}>
-              <NavbarComponent></NavbarComponent>
+    <Provider>
+      <html lang="en">
+        <body>
+          <div className="bg-primary w-full overflow-hidden">
+            <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+              <div className={`${styles.boxWidth}`}>
+                <NavbarComponent></NavbarComponent>
+              </div>
             </div>
-          </div>
+            <div className={`bg-primary  ${styles.paddingX} ${styles.flexCenter} ${styles.fullHeight} `}>
+              <div className={`${styles.boxWidth} `}>
+                <BodyComponent>{children}</BodyComponent>
+              </div>
+            </div>
 
-          <div className={`bg-primary  ${styles.paddingX} ${styles.flexCenter} ${styles.fullHeight} `}>
-            <div className={`${styles.boxWidth} `}>
-              <BodyComponent>{children}</BodyComponent>
+            <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+              <div className={`${styles.boxWidth}`}>
+                <FooterComponent />
+              </div>
             </div>
           </div>
-
-          <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-            <div className={`${styles.boxWidth}`}>
-              <FooterComponent />
-            </div>
-          </div>
-        </div>
-      </body>
-    </html>
+        </body>
+      </html>
+    </Provider>
   );
 }
