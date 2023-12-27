@@ -39,18 +39,22 @@ const GioHang = () => {
           })}
         </div>
 
-        <div className="text-white border-2 border-white p-4 flex flex-col gap-4 min-w-[320px]">
+        <form className="text-white border-2 border-white p-4 flex flex-col gap-4 min-w-[320px]">
           <h3 className="text-center font-bold text-xl">Thông tin đặt hàng</h3>
           <div className={`${styles.flexBetween}`}>
             <div>123x</div>
             <div>123x1661</div>
           </div>
           <div>sqdsqdsqd</div>
-          <div>sqdsqdsqd</div>
-          <div>sqdsqdsqd</div>
+          <input type="text" placeholder="Tên ..." className={`grow py-2 px-4 rounded-lg bg-searchForm text-white`} required></input>
+          <input type="text" placeholder="Số điện thoại ..." className={`grow py-2 px-4 rounded-lg bg-searchForm text-white`} required></input>
 
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded">Xác nhận đặt hàng</button>
-        </div>
+          <input type="text" placeholder="Email ..." className={`grow py-2 px-4 rounded-lg bg-searchForm text-white`} required></input>
+
+          <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded">
+            Xác nhận đặt hàng
+          </button>
+        </form>
       </div>
     </>
   );
