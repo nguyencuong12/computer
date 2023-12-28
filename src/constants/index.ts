@@ -25,147 +25,23 @@ import {
 
 export const categories = [
   {
-    id: "Màn hình",
+    id: "Màn-hình",
     title: "Màn hình",
     icon: moniter,
     link: "/man-hinh",
-    children: [
+    subMenuList: [
       {
         id: "man-hinh-hang",
-        childrenItem: [
+        subMenuCol: [
           {
-            id: "Màn hình ASUS",
+            id: "man-hinh-asus",
             title: "Màn hình ASUS",
             link: "/man-hinh-asus",
           },
           {
-            id: "Màn hình LG",
+            id: "man-hinh-lg",
             title: "Màn hình LG",
             link: "/man-hinh-lg",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "Máy bộ",
-    title: "Máy bộ",
-    icon: computer,
-    link: "/may-bo",
-    children: [
-      {
-        id: "maybo",
-        childrenItem: [
-          {
-            id: "maybocustom",
-            title: "Máy bộ",
-            link: "/may-bo",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "Case-Nguồn",
-    title: "Case-Nguồn",
-    icon: case_computer,
-    link: "/case-nguon",
-    children: [
-      {
-        id: "Case Theo Hãng",
-        childrenItem: [
-          {
-            id: "case-theo-hang",
-            title: "Case Theo Hãng",
-            link: "/case-theo-hang",
-          },
-          {
-            id: "case-asus",
-            title: "Case Asus",
-            link: "/case-asus",
-          },
-          {
-            id: "case-sama",
-            title: "Case Sama",
-            link: "/case-sama",
-          },
-          {
-            id: "case-corsair",
-            title: "Case Corsair",
-            link: "/case-corsair",
-          },
-        ],
-      },
-      {
-        id: "Case Theo Giá",
-        childrenItem: [
-          {
-            id: "case-duoi-1tr",
-            title: "Case Dưới 1 Triệu",
-            link: "/case-duoi-1tr",
-          },
-          {
-            id: "case-tu-1tr-2tr",
-            title: "Case Từ 1 Triệu Đến 2 Triệu",
-            link: "/case-tu-1tr-2tr",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: "RAM Và Ổ Cứng",
-    title: "RAM Và Ổ Cứng",
-    icon: ram,
-    link: "/ram",
-    children: [
-      {
-        id: "Dung lượng ram",
-        childrenItem: [
-          {
-            id: "dung-luong-ram",
-            title: "Dung lượng ram",
-            link: "/ram-pc",
-          },
-          {
-            id: "ram-8gb",
-            title: "Ram-8gb",
-            link: "/ram-pc/ram-8gb",
-          },
-        ],
-      },
-      {
-        id: "Hãng ram",
-        childrenItem: [
-          {
-            id: "hang-ram",
-            title: "Hãng ram",
-            link: "/ram-pc",
-          },
-          {
-            id: "Ram Kingston",
-            title: "Ram Kingston",
-            link: "/ram-pc/kingston",
-          },
-        ],
-      },
-      {
-        id: "Loại ram",
-        childrenItem: [
-          {
-            id: "loai-ram",
-            title: "Loại ram",
-            link: "/ram-pc",
-          },
-          {
-            id: "DDR4",
-            title: "DDR4",
-            link: "/ram-pc/ddr4",
-          },
-          {
-            id: "DDR5",
-            title: "DDR5",
-            link: "/ram-pc/ddr5",
           },
         ],
       },

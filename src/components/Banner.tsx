@@ -21,18 +21,17 @@ const Banner = () => {
             >
               <img src={category.icon.src} className="max-w-[35px]" alt="icon"></img>
               <div className="ml-8 ">{category.title}</div>
-              <div className="rounded-md group/edit invisible group-hover/item:visible bg-white absolute top-0 left-[252px] z-80 h-full w-[1280px] text-black py-6 cursor-default">
+              <div className="rounded-md group/edit invisible group-hover/item:visible  bg-white absolute top-0 left-[252px] z-50 h-full w-[1280px] text-black py-6 cursor-default">
+                <div className="text-center font-bold text-red">{category.title}</div>
                 <div className={"grid grid-cols-4 gap-4 px-4"}>
-                  {category.children.map((itemParent) => {
+                  {category.subMenuList.map((subList) => {
                     return (
-                      <ul className="text-black" key={itemParent.id}>
-                        {itemParent.childrenItem.map((item, index) => {
+                      <ul className="text-black" key={subList.id}>
+                        {subList.subMenuCol.map((item, index) => {
                           return (
                             <li
                               key={item.id}
-                              className={` py-2 ${
-                                index == itemParent.childrenItem.indexOf(itemParent.childrenItem[0]) ? "text-red font-bold" : "text-black"
-                              }`}
+                              className={` py-2 ${index == subList.subMenuCol.indexOf(subList.subMenuCol[0]) ? "text-red font-bold" : "text-black"}`}
                             >
                               <a href={item.link} className="hover:text-red">
                                 {item.title}
@@ -49,7 +48,7 @@ const Banner = () => {
           );
         })}
       </div>
-      <div className="grow ">
+      <div className="grow relative z-20">
         <div className="bg-white rounded-md h-full max-w-[1200px] max-h-[500px]">
           <Carousel />
         </div>

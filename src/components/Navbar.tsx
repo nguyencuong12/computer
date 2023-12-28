@@ -59,7 +59,7 @@ const NavbarComponent = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
-          {categories.map((cate) => {
+          {categories.map((cate, index) => {
             return (
               <li
                 key={cate.id}
@@ -67,13 +67,10 @@ const NavbarComponent = () => {
                   active === cate.title ? "text-white" : "text-dimWhite"
                 } p-2`}
               >
-                <a href={`${cate.link}`}>{cate.title}</a>
+                <DropdownBtn id={cate.id} title={cate.title} link={cate.link} subMenu={cate.subMenuList[index].subMenuCol}></DropdownBtn>
               </li>
             );
           })}
-
-          <DropdownBtn id="1" title="123" children={[]}></DropdownBtn>
-          <DropdownBtn id="153" title="456" children={[]}></DropdownBtn>
 
           <div className="relative mt-4 ">
             <span className="dot absolute left-4 bottom-4">2</span>

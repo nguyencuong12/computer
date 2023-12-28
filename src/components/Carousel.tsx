@@ -13,7 +13,7 @@ import "swiper/css/scrollbar";
 export default () => {
   return (
     <Swiper
-      className="bg-white h-full rounded-md"
+      className="bg-white h-full rounded-md "
       // install Swiper modules
       modules={[Pagination, Scrollbar, A11y]}
       spaceBetween={50}
