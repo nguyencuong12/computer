@@ -7,6 +7,7 @@ const LandingPage = () => {
       <Banner />
       <HeroComponent />
       <StatsComponent />
+
       <BusinessComponent />
       <BillingComponent />
       <CardDealComponent />

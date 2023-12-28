@@ -8,12 +8,13 @@ import styles from "./style";
 
 import { NavbarComponent, FooterComponent, BodyComponent } from "@/components";
 import Provider from "./provider";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <Provider>
       <html lang="en">
         <body>
-          <div className="bg-primary w-full overflow-hidden">
+          <div className="bg-navbarColor w-full overflow-hidden">
             <div className={`${styles.paddingX} ${styles.flexCenter}`}>
               <div className={`${styles.boxWidth}`}>
                 <NavbarComponent></NavbarComponent>

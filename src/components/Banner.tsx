@@ -4,11 +4,12 @@ import React from "react";
 import { categories } from "@/constants";
 import styles from "@/app/style";
 import { bill } from "@/assets";
+import { Carousel } from "@/components";
 
 const Banner = () => {
   return (
-    <div className="flex mt-4 gap-2">
-      <div className="bg-white divide-y min-w-[250px] relative">
+    <div className="flex mt-4 gap-2 flex-col sm:flex-row">
+      <div className="bg-white divide-y min-w-[250px] relative rounded-md hidden sm:block">
         {categories.map((category) => {
           return (
             <div
@@ -20,7 +21,7 @@ const Banner = () => {
             >
               <img src={category.icon.src} className="max-w-[35px]" alt="icon"></img>
               <div className="ml-8 ">{category.title}</div>
-              <div className="group/edit invisible group-hover/item:visible bg-white absolute top-0 left-[252px] z-80 h-full w-[1280px] text-black py-6 cursor-default">
+              <div className="rounded-md group/edit invisible group-hover/item:visible bg-white absolute top-0 left-[252px] z-80 h-full w-[1280px] text-black py-6 cursor-default">
                 <div className={"grid grid-cols-4 gap-4 px-4"}>
                   {category.children.map((itemParent) => {
                     return (
@@ -48,20 +49,12 @@ const Banner = () => {
           );
         })}
       </div>
-      <div className="grow">
-        <div className="grid grid-cols-5 gap-4 ">
-          <div className="bg-white col-span-3  ">
-            <img src={bill.src} className="max-h-[400px]"></img>
-          </div>
-
-          <div className={` bg-blue-100 col-span-2 flex flex-col gap-8 ${styles.flexBetween}`}>
-            <img src={bill.src} className="max-h-[250px] object-contain "></img>
-            <img src={bill.src} className="max-h-[250px] object-contain "></img>
-          </div>
+      <div className="grow ">
+        <div className="bg-white rounded-md h-full max-w-[1200px] max-h-[500px]">
+          <Carousel />
         </div>
       </div>
     </div>
-    //TODO:
   );
 };
 

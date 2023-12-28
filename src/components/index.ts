@@ -18,6 +18,9 @@ import SearchForm from "./SearchForm";
 import SearchItemResult from "./SearchItemResult";
 import Banner from "./Banner";
 import Categories from "./Categories";
+import Carousel from "./Carousel";
+import DropdownBtn from "./DropdownBtn";
+
 export {
   CTA,
   NavbarComponent,
@@ -37,5 +40,7 @@ export {
   SearchForm,
   SearchItemResult,
   Banner,
-  Categories
+  Categories,
+  Carousel,
+  DropdownBtn,
 };

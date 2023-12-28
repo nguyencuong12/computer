@@ -25,11 +25,11 @@ const GioHang = () => {
   }, [cookies]);
   return (
     <>
-      <div className="flex gap-6">
-        <div className="flex-1">
+      <div className="flex gap-6  border-2 border-white text-white ">
+        <div className="flex-1 divide-y">
           {products.map((product, index) => {
             return (
-              <div className={`text-white ${styles.flexBetween} p-6 border-2 border-white text-white   `} key={index}>
+              <div className={`text-white ${styles.flexBetween} p-6  `} key={index}>
                 <div>{product.title}</div>
                 <div>{product.title}</div>
                 <div>{product.title}</div>

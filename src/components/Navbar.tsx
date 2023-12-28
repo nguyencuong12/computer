@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import { navLinks } from "@/constants";
+import { navLinks, categories } from "@/constants";
 import { logo, menu, close, shopping } from "@/assets";
-import { SearchForm } from "@/components";
-import Link from "next/link";
+import { DropdownBtn, SearchForm } from "@/components";
 
+import Link from "next/link";
 const NavbarComponent = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
@@ -20,7 +20,9 @@ const NavbarComponent = () => {
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] sm:text-[14px] ${active === nav.title ? "text-white" : "text-dimWhite"}
+            className={`text-white font-poppins font-normal cursor-pointer text-[16px] sm:text-[14px] ${
+              active === nav.title ? "text-white" : "text-dimWhite"
+            }
           ${index === navLinks.length - 1 ? "mr-0" : "mr-4"}
           `}
           >
@@ -28,7 +30,7 @@ const NavbarComponent = () => {
           </li>
         ))}
       </ul>
-      <div className="ml-4 relative border-2 hidden md:block">
+      <div className="ml-4 relative  hidden md:block">
         <span className="dot absolute left-4 bottom-4">2</span>
         <Link href="gio-hang">
           <img src={shopping.src} className="max-w-[25px]"></img>
@@ -44,19 +46,35 @@ const NavbarComponent = () => {
           }}
         ></img>
       </div>
-      <div className={`${!toggle ? "hidden" : "flex"} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[300px] rounded-xl sidebar z-50`}>
+      <div className={`${!toggle ? "hidden" : "flex"} p-6 bg-navbarColor absolute top-20 left-0 right-0 my-2 min-w-full  sidebar z-50`}>
         <ul className="list-none flex justify-end items-start flex-1 flex-col">
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
-              className={`font-poppins font-medium cursor-pointer text-[16px] ${active === nav.title ? "text-white" : "text-dimWhite"} ${
-                index === navLinks.length - 1 ? "mb-0" : "mb-4"
-              }`}
+              className={`text-white font-poppins font-medium cursor-pointer text-[16px] ${
+                active === nav.title ? "text-white" : "text-dimWhite"
+              } p-2 `}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          {categories.map((cate) => {
+            return (
+              <li
+                key={cate.id}
+                className={`text-white font-poppins font-medium cursor-pointer text-[16px] ${
+                  active === cate.title ? "text-white" : "text-dimWhite"
+                } p-2`}
+              >
+                <a href={`${cate.link}`}>{cate.title}</a>
+              </li>
+            );
+          })}
+
+          <DropdownBtn id="1" title="123" children={[]}></DropdownBtn>
+          <DropdownBtn id="153" title="456" children={[]}></DropdownBtn>
+
           <div className="relative mt-4 ">
             <span className="dot absolute left-4 bottom-4">2</span>
             <Link href="gio-hang">
