@@ -6,6 +6,11 @@
 @tailwind utilities;
 
 :root {
+
+  --swiper-pagination-color:red;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-inactive-color: red;
     --black-gradient: linear-gradient(
       144.39deg,
       #ffffff -278.56%,
@@ -18,7 +23,37 @@
   * {
     scroll-behavior: smooth;
   }
-  
+  .section-title{
+    color:red;
+    font-size:xx-large;
+    font-weight:bold;
+   
+    padding:5px 10px;
+    text-align: center;
+    
+
+   
+  }
+  .view-all-btn { 
+     color:cadetblue;
+     padding:5px 10px;
+     font-size:large;
+     text-align: center;
+     margin-top:10px;
+     inline-size: 150px;
+     text-align: center;
+     border:1px solid red;
+     position:relative;
+     margin-left: auto;
+     margin-right: auto;
+     left: 0;
+     right: 0;
+     text-align: center;
+     border:2px solid cadetblue;
+
+
+  }
+
   .text-gradient {
     background: radial-gradient(
       64.18% 64.18% at 71.16% 35.69%,
@@ -139,6 +174,9 @@
     background: rgba(255, 255, 255, 0.6);
     filter: blur(750px);
   }
+
+
+
   .dot {
     height:20px;
     width: 20px;

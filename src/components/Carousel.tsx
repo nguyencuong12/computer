@@ -15,11 +15,10 @@ export default () => {
     <Swiper
       className="bg-white h-full rounded-md "
       // install Swiper modules
-      modules={[Pagination, Scrollbar, A11y]}
+      modules={[Pagination, A11y]}
       spaceBetween={50}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >

@@ -20,7 +20,10 @@ import Banner from "./Banner";
 import Categories from "./Categories";
 import Carousel from "./Carousel";
 import DropdownBtn from "./DropdownBtn";
-
+import Policy from "./Policy";
+import CarouselWith4Items from "./CarouselWith4Items";
+import CarouselWith2Items from "./CarouselWith2Items";
+import SectionWithGallery from "./SectionWithGallery";
 export {
   CTA,
   NavbarComponent,
@@ -43,4 +46,8 @@ export {
   Categories,
   Carousel,
   DropdownBtn,
+  Policy,
+  CarouselWith4Items,
+  CarouselWith2Items,
+  SectionWithGallery,
 };
