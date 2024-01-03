@@ -13,6 +13,7 @@ import {
   Testimonials,
   Clients,
   SectionWithGallery,
+  BannerVer2,
 } from "@/components";
 
 import { bill } from "@/assets";
@@ -76,7 +77,8 @@ const LandingPage = () => {
       animate={"visible"}
       transition={{ duration: 0.4, delay: 0.2 }}
     >
-      <Banner />
+      {/* <Banner /> */}
+      <BannerVer2/>
       <Policy />
       <SectionWithGallery title="Sản phẩm bán chạy" categories={[]} galleries={galleries}></SectionWithGallery>
 

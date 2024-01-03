@@ -24,6 +24,7 @@ import Policy from "./Policy";
 import CarouselWith4Items from "./CarouselWith4Items";
 import CarouselWith2Items from "./CarouselWith2Items";
 import SectionWithGallery from "./SectionWithGallery";
+import BannerVer2 from "./BannerVer2";
 export {
   CTA,
   NavbarComponent,
@@ -50,4 +51,5 @@ export {
   CarouselWith4Items,
   CarouselWith2Items,
   SectionWithGallery,
+  BannerVer2
 };
