@@ -13,13 +13,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <Provider>
       <html lang="en">
         <body>
-          <div className="bg-navbarColor w-full overflow-hidden">
+          <div className="bg-white w-full overflow-hidden">
             <div className={`${styles.paddingX} ${styles.flexCenter}`}>
               <div className={`${styles.boxWidth}`}>
                 <NavbarComponent></NavbarComponent>
               </div>
             </div>
-            <div className={`bg-primary  ${styles.paddingX} ${styles.flexCenter} ${styles.fullHeight} `}>
+            <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} ${styles.fullHeight} `}>
               <div className={`${styles.boxWidth} `}>
                 <BodyComponent>{children}</BodyComponent>
               </div>

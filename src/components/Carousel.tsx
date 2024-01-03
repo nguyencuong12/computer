@@ -13,7 +13,7 @@ import "swiper/css/scrollbar";
 export default () => {
   return (
     <Swiper
-      className="bg-white h-full rounded-md "
+      className="h-[450px] rounded-lg bg-red"
       // install Swiper modules
       modules={[Pagination, A11y]}
       spaceBetween={50}
@@ -26,9 +26,15 @@ export default () => {
         <img src={bill.src} className=" object-contain"></img>
       </SwiperSlide>
 
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
+      <SwiperSlide>
+        <img src={bill.src} className=" object-contain"></img>
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={bill.src} className=" object-contain"></img>
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={bill.src} className=" object-contain"></img>
+      </SwiperSlide>
     </Swiper>
   );
 };

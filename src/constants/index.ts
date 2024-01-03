@@ -22,6 +22,7 @@ import {
   laptop,
   case_computer,
 } from "@/assets";
+import { v4 as uuidv4 } from "uuid";
 
 export const categories = [
   {
@@ -104,6 +105,62 @@ export const navLinks = [
   {
     id: "Liên Hệ",
     title: "Liên Hệ",
+  },
+];
+export const wide_nav = [
+  {
+    id: uuidv4(),
+    title: "Tự build pc",
+    link: "/tu-build-pc",
+    src: computer.src,
+  },
+  {
+    id: uuidv4(),
+    title: "Máy bộ",
+    link: "/may-bo",
+    src:case_computer.src
+  },
+  {
+    id: uuidv4(),
+    title: "Màn hình",
+    link: "/man-hinh",
+    src:moniter.src
+  },
+  {
+    id: uuidv4(),
+    title: "Laptop",
+    link: "/laptop",
+    src:laptop.src
+  },
+  {
+    id: uuidv4(),
+    title: "Bàn phím",
+    link: "/ban-phim",
+    src:keyboard.src
+  },
+  {
+    id: uuidv4(),
+    title: "Chuột",
+    link: "/chuot",
+    src:mouse.src
+  },
+  {
+    id: uuidv4(),
+    title: "Tai nghe",
+    link: "/tai-nghe",
+    src:headphone.src
+  },
+  {
+    id: uuidv4(),
+    title: "CPU",
+    link: "/cpu",
+    src:cpu.src
+  },
+  {
+    id: uuidv4(),
+    title: "Ram",
+    link: "/ram",
+    src:ram.src
   },
 ];
 

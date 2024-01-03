@@ -1,28 +1,27 @@
 "use client";
 import React, { useState } from "react";
 import { navLinks, categories } from "@/constants";
-import { logo, menu, close, shopping } from "@/assets";
+import { logo_tokyo, menu, close, shopping } from "@/assets";
 import { DropdownBtn, SearchForm } from "@/components";
 
 import Link from "next/link";
 const NavbarComponent = () => {
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState("Trang chủ");
   const [toggle, setToggle] = useState(false);
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar ">
-      <Link href="/">
-        <img src={logo.src} alt="Log 123" className="w-[120px] h-[32px]"></img>
+      <div className="flex-1">
+        <SearchForm />
+      </div>
+      <Link href="/" className="">
+        <img src={logo_tokyo.src} alt="Log 123" className="w-[120px] h-[100px] object-contain"></img>
       </Link>
-      <SearchForm />
       <ul className="list-none sm:flex hidden justify-end items-center flex-1 ">
-        {/* {navLinks.map((nav,index))} */}
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={`text-white font-poppins font-normal cursor-pointer text-[16px] sm:text-[14px] ${
-              active === nav.title ? "text-white" : "text-dimWhite"
-            }
+            className={` font-poppins font-semibold cursor-pointer text-[16px] sm:text-[14px] ${active === nav.title ? "text-red" : "text-[#00000]"}
           ${index === navLinks.length - 1 ? "mr-0" : "mr-4"}
           `}
           >
@@ -46,14 +45,12 @@ const NavbarComponent = () => {
           }}
         ></img>
       </div>
-      <div className={`${!toggle ? "hidden" : "flex"} p-6 bg-navbarColor absolute top-20 left-0 right-0 my-2 min-w-full  sidebar z-50`}>
+      <div className={`${!toggle ? "hidden" : "flex"} p-6 bg-white z-10 absolute top-32 left-0 right-0 my-2 min-w-full  h-auto sidebar z-50`}>
         <ul className="list-none flex justify-end items-start flex-1 flex-col">
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
-              className={`text-white font-poppins font-medium cursor-pointer text-[16px] ${
-                active === nav.title ? "text-white" : "text-dimWhite"
-              } p-2 `}
+              className={`t font-poppins font-semibold cursor-pointer text-[16px] ${active === nav.title ? "text-red" : "ext-[#000000]"} p-2 `}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>

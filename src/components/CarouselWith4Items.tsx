@@ -38,9 +38,9 @@ const CarouselWith4Items = (props: propsItems) => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-full bg-gray object-contain hover:-translate-y-1 hover:scale-110 duration-300 "
+                    className="h-full bg-gray object-contain hover:-translate-y-1 hover:scale-110 duration-300 rounded"
                   ></img>
-                  <p className="mt-2 px-2 "> {item.title}</p>
+                  <p className="mt-2 px-2 text-black font-semibold text-lg"> {item.title}</p>
                   <p className="mt-2 px-2 text-red font-bold">
                     {FormatUtils.formatPriceVND(Number(item.price))}{" "}
                     <del className="text-gray"> {FormatUtils.formatPriceVND(Number(item.beforeDiscount))}</del>

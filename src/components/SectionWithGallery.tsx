@@ -10,14 +10,15 @@ interface sectionProps {
 const SectionWithGallery = (props: sectionProps) => {
   const { title, categories, galleries } = props;
   return (
-    <div className="text-white my-8 flex flex-col my-4">
-      <Link href="" className="section-title">
-        {title}
-      </Link>
-      <Link href="" className="view-all-btn">
-        Xem tất cả
-      </Link>
-
+    <div className="text-white my-8 ">
+      <div className="flex justify-between items-center relative section-markup mb-4 py-2">
+        <Link href="" className="section-title text-red font-bold text-2xl ">
+          <span>{title}</span>
+        </Link>
+        <Link href="" className="border-2 border-red font-bold px-4 py-2 text-red">
+          Xem tất cả
+        </Link>
+      </div>
       <div className="categories">
         {categories.map((categoryItem) => {
           return <div key={categoryItem.id}>1</div>;

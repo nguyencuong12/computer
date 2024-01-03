@@ -23,17 +23,42 @@
   * {
     scroll-behavior: smooth;
   }
-  .section-title{
+  /* .section-title{
     color:red;
     font-size:xx-large;
     font-weight:bold;
-   
     padding:5px 10px;
     text-align: center;
-    
-
    
-  }
+  }  */
+
+
+
+
+.mainmenu_item:hover:after {
+    content:'';
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid white;
+    z-index:100;
+    position: absolute;
+    bottom:0;
+    top:59px;
+    left:50%;
+    margin-left: -5px;
+}
+.section-markup{
+  border-bottom:2px solid #ececec;
+  border-radius: 10px;
+
+}
+  
+ 
+
+
+
   .view-all-btn { 
      color:cadetblue;
      padding:5px 10px;

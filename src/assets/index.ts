@@ -36,6 +36,7 @@ import keyboard from "./keyboard.png";
 import laptop from "./laptop.png";
 import case_computer from "./case_computer.png";
 import down_chevron from "./down_chevron.png";
+import logo_tokyo from "./logo_tokyo.png";
 export {
   case_computer,
   cpu,
@@ -73,4 +74,5 @@ export {
   search,
   shopping,
   down_chevron,
+  logo_tokyo,
 };

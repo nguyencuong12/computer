@@ -78,15 +78,17 @@ const LandingPage = () => {
       transition={{ duration: 0.4, delay: 0.2 }}
     >
       {/* <Banner /> */}
-      <BannerVer2/>
-      <Policy />
+      <BannerVer2 />
+      {/* <Policy /> */}
+      <SectionWithGallery title="Sản phẩm bán chạy" categories={[]} galleries={galleries}></SectionWithGallery>
       <SectionWithGallery title="Sản phẩm bán chạy" categories={[]} galleries={galleries}></SectionWithGallery>
 
+      {/* 
       <BusinessComponent />
 
       <CardDealComponent />
 
-      <Testimonials />
+      <Testimonials /> */}
       <Clients />
     </motion.div>
   );
