@@ -24,7 +24,11 @@ import Policy from "./Policy";
 import CarouselWith4Items from "./CarouselWith4Items";
 import CarouselWith2Items from "./CarouselWith2Items";
 import SectionWithGallery from "./SectionWithGallery";
+import CarouselProductDescription from "./CarouselProductDescription";
 import BannerVer2 from "./BannerVer2";
+import Modal from "./Modal";
+import Product from "./Product";
+import ProductDescription from "./ProductDescription";
 export {
   CTA,
   NavbarComponent,
@@ -51,5 +55,9 @@ export {
   CarouselWith4Items,
   CarouselWith2Items,
   SectionWithGallery,
-  BannerVer2
+  BannerVer2,
+  Modal,
+  Product,
+  ProductDescription,
+  CarouselProductDescription,
 };

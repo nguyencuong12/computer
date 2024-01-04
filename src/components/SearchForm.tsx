@@ -18,7 +18,7 @@ const SearchForm = () => {
     <>
       <form className={`mx-4 grow flex items-center justify-center`}>
         <div className={`flex items-center relative  w-full max-w-[400px]`}>
-          <input type="text" placeholder="search something ..." className={`outline-none  grow py-2 px-4 rounded-lg bg-gray text-white`}></input>
+          <input type="text" placeholder="search something ..." className={`outline-none  grow py-2 px-4 rounded-2xl bg-gray text-white`}></input>
           <button className="absolute right-0">
             <img src={search.src} alt="search button" className="w-8"></img>
           </button>

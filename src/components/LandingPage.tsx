@@ -77,6 +77,8 @@ const LandingPage = () => {
       animate={"visible"}
       transition={{ duration: 0.4, delay: 0.2 }}
     >
+     
+
       {/* <Banner /> */}
       <BannerVer2 />
       {/* <Policy /> */}

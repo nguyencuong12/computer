@@ -37,6 +37,7 @@ import laptop from "./laptop.png";
 import case_computer from "./case_computer.png";
 import down_chevron from "./down_chevron.png";
 import logo_tokyo from "./logo_tokyo.png";
+import banner_gearvn from "./banner_gearvn.png";
 export {
   case_computer,
   cpu,
@@ -75,4 +76,5 @@ export {
   shopping,
   down_chevron,
   logo_tokyo,
+  banner_gearvn,
 };

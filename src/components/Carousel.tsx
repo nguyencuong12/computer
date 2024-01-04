@@ -3,7 +3,7 @@ import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { bill } from "@/assets";
+import { bill, banner_gearvn } from "@/assets";
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,7 +13,7 @@ import "swiper/css/scrollbar";
 export default () => {
   return (
     <Swiper
-      className="h-[450px] rounded-lg bg-red"
+      className="h-[300px] sm:h-[600px] rounded-lg bg-white"
       // install Swiper modules
       modules={[Pagination, A11y]}
       spaceBetween={50}
@@ -23,7 +23,7 @@ export default () => {
       onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide>
-        <img src={bill.src} className=" object-contain"></img>
+        <img src={banner_gearvn.src} className=" object-contain w-full"></img>
       </SwiperSlide>
 
       <SwiperSlide>

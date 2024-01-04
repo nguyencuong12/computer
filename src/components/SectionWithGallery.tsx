@@ -19,7 +19,7 @@ const SectionWithGallery = (props: sectionProps) => {
           Xem tất cả
         </Link>
       </div>
-      <div className="categories">
+      <div className="categories ">
         {categories.map((categoryItem) => {
           return <div key={categoryItem.id}>1</div>;
         })}

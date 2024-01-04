@@ -113,54 +113,159 @@ export const wide_nav = [
     title: "Tự build pc",
     link: "/tu-build-pc",
     src: computer.src,
+    subMenu: [],
   },
   {
     id: uuidv4(),
     title: "Máy bộ",
     link: "/may-bo",
-    src:case_computer.src
+    src: case_computer.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "MAY BO 1",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+      {
+        id: uuidv4(),
+        title: "MAY BO 2",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
   },
   {
     id: uuidv4(),
     title: "Màn hình",
     link: "/man-hinh",
-    src:moniter.src
+    src: moniter.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "MAY BO 1",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
   },
   {
     id: uuidv4(),
     title: "Laptop",
     link: "/laptop",
-    src:laptop.src
+    src: laptop.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "MAY BO 1",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
   },
   {
     id: uuidv4(),
     title: "Bàn phím",
     link: "/ban-phim",
-    src:keyboard.src
+    src: keyboard.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "MAY BO 1",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
   },
   {
     id: uuidv4(),
     title: "Chuột",
     link: "/chuot",
-    src:mouse.src
+    src: mouse.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "MAY BO 1",
+        link: "/tu-build-pc",
+        subMenu: [
+          {
+            id: uuidv4(),
+            title: "May bo tu build 1 ",
+            link: "sdq",
+          },
+          {
+            id: uuidv4(),
+            title: "May bo tu build 2 May bo tu build 2  ",
+            link: "sdq",
+          },
+        ],
+      },
+      {
+        id: uuidv4(),
+        title: "MAY BO 2",
+        link: "/tu-build-pc2",
+        subMenu: [],
+      },
+      {
+        id: uuidv4(),
+        title: "MAY BO 1",
+        link: "/tu-build-pc",
+        subMenu: [
+          {
+            id: uuidv4(),
+            title: "May bo tu build 1 ",
+            link: "sdq",
+          },
+          {
+            id: uuidv4(),
+            title: "May bo tu build 2 ",
+            link: "sdq",
+          },
+        ],
+      },
+    ],
   },
   {
     id: uuidv4(),
     title: "Tai nghe",
     link: "/tai-nghe",
-    src:headphone.src
+    src: headphone.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "MAY BO 1",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
   },
   {
     id: uuidv4(),
     title: "CPU",
     link: "/cpu",
-    src:cpu.src
+    src: cpu.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "MAY BO 1",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
   },
   {
     id: uuidv4(),
     title: "Ram",
     link: "/ram",
-    src:ram.src
+    src: ram.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "MAY BO 1",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
   },
 ];
 
