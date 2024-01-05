@@ -4,13 +4,15 @@ import { FaWindowClose } from "react-icons/fa";
 import { CarouselQuickView } from "@/components";
 import Link from "next/link";
 import { FormatUtils } from "@/utils/format";
+import { useDispatch } from "react-redux";
+import { closeQuickView } from "@/store/slices/quickViewProduct";
 
 interface propsInterface {
   isVisible: boolean;
-  onClose(newValue: boolean): void;
 }
 const ModalQuickView = (props: propsInterface) => {
-  const { isVisible, onClose } = props;
+  const dispatch = useDispatch();
+  const { isVisible } = props;
   if (!isVisible) return null;
   return (
     <div className="fixed inset-0 bg-black bg-opacity-25 z-[1200] backdrop-blur-sm  flex  justify-center items-center ">
@@ -20,7 +22,8 @@ const ModalQuickView = (props: propsInterface) => {
             size={30}
             className="cursor-pointer  hover:animate-spin  "
             onClick={() => {
-              onClose(!isVisible);
+              dispatch(closeQuickView());
+              // onClose(!isVisible);
             }}
           />
         </div>

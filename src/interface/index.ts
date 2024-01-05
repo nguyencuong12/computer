@@ -1,4 +1,4 @@
-interface ItemWithLink {
+interface ProductInterface {
   id: string;
   title?: string;
   link?: string;

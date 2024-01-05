@@ -19,16 +19,15 @@ import {
 
 import { bill } from "@/assets";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, selectCount } from "../store/slices/counter";
-
+import { showQuickView, closeQuickView, isOpenQuickView } from "@/store/slices/quickViewProduct";
 const LandingPage = () => {
-  const count = useSelector(selectCount);
-  console.log("COUNT", count);
   const dispatch = useDispatch();
+  const isOpenModal = useSelector(isOpenQuickView);
+
 
   const ref = useRef(null);
 
-  const galleries: ItemWithLink[] = [
+  const galleries: ProductInterface[] = [
     {
       id: uuidv4(),
       title: "Mini PC ASRock DeskMini X300 - X300/B/BB/BOX/US",
@@ -88,27 +87,9 @@ const LandingPage = () => {
       animate={"visible"}
       transition={{ duration: 0.4, delay: 0.2 }}
     >
-      <button
-        onClick={() => {
-          dispatch(increment(item));
-        }}
-      >
-        Increment
-      </button>
-      <button
-        onClick={() => {
-          dispatch(decrement());
-        }}
-      >
-        Decrement
-      </button>
-      <div className="text-black">{count}</div>
-      {/* <ModalQuickView
-        isVisible={true}
-        onClose={(newValue) => {
-          // setQuickView(newValue);
-        }}
-      /> */}
+    
+
+      <ModalQuickView isVisible={isOpenModal} />
       {/* <Banner /> */}
       <BannerVer2 />
       {/* <Policy /> */}

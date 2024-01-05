@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { FormatUtils } from "@/utils/format";
 import { shopping } from "@/assets";
+import { showQuickView,} from "@/store/slices/quickViewProduct";
+import { useDispatch } from "react-redux";
+
 
 interface propsInterface {
   link: string;
@@ -15,8 +18,12 @@ interface propsInterface {
 const Product = (props: propsInterface) => {
   const [quickView, setQuickView] = useState(false);
   const { title, image, link, price, beforeDiscount } = props;
+  const dispatch = useDispatch();
+
   const handleQuickView = () => {
     console.log("QUICK VIEW CALL");
+    dispatch(showQuickView())
+
     setQuickView(!quickView);
   };
   const handleAddToCart = () => {

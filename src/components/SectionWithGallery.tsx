@@ -3,8 +3,8 @@ import Link from "next/link";
 import { CarouselWith4Items } from "@/components";
 interface sectionProps {
   title: string;
-  categories: ItemWithLink[];
-  galleries: ItemWithLink[];
+  categories: ProductInterface[];
+  galleries: ProductInterface[];
 }
 
 const SectionWithGallery = (props: sectionProps) => {

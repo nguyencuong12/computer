@@ -13,7 +13,7 @@ import { FormatUtils } from "@/utils/format";
 import { Product } from "@/components";
 
 interface propsItems {
-  items: ItemWithLink[];
+  items: ProductInterface[];
 }
 const CarouselWith4Items = (props: propsItems) => {
   const { items } = props;

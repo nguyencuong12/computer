@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterSliceReducer from "./slices/counter";
+import quickViewSliceReducer from "./slices/quickViewProduct";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       counter: counterSliceReducer,
+      quickview: quickViewSliceReducer,
     },
   });
 };

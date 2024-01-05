@@ -6,7 +6,7 @@ interface dropdownProps {
   id: string;
   title: string;
   link: string;
-  subMenu: ItemWithLink[];
+  subMenu: ProductInterface[];
   //   children: any[];
 }
 
