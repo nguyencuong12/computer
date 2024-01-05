@@ -7,32 +7,35 @@ import styles from "./style";
 
 import { NavbarComponent, FooterComponent, BodyComponent } from "@/components";
 import Provider from "./provider";
+import StoreProvider from "./reduxProvider";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <Provider>
-      <html lang="en">
-        <body>
-          <div className="bg-white w-full overflow-hidden">
-            <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-              <div className={`${styles.boxWidth}`}>
-                <NavbarComponent></NavbarComponent>
+    <StoreProvider>
+      <Provider>
+        <html lang="en">
+          <body>
+            <div className="bg-white w-full overflow-hidden">
+              <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+                <div className={`${styles.boxWidth}`}>
+                  <NavbarComponent></NavbarComponent>
+                </div>
               </div>
-            </div>
-            <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} ${styles.fullHeight} `}>
-              <div className={`${styles.boxWidth} `}>
-                <BodyComponent>{children}</BodyComponent>
+              <div className={`bg-white ${styles.paddingX} ${styles.flexCenter} ${styles.fullHeight} `}>
+                <div className={`${styles.boxWidth} `}>
+                  <BodyComponent>{children}</BodyComponent>
+                </div>
               </div>
-            </div>
 
-            <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-              <div className={`${styles.boxWidth}`}>
-                <FooterComponent />
+              <div className={`bg-[#F5F7FB] ${styles.paddingX} ${styles.flexCenter}`}>
+                <div className={`${styles.boxWidth}`}>
+                  <FooterComponent />
+                </div>
               </div>
             </div>
-          </div>
-        </body>
-      </html>
-    </Provider>
+          </body>
+        </html>
+      </Provider>
+    </StoreProvider>
   );
 }

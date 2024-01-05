@@ -14,10 +14,18 @@ import {
   Clients,
   SectionWithGallery,
   BannerVer2,
+  ModalQuickView,
 } from "@/components";
 
 import { bill } from "@/assets";
+import { useSelector, useDispatch } from "react-redux";
+import { increment, decrement, selectCount } from "../store/slices/counter";
+
 const LandingPage = () => {
+  const count = useSelector(selectCount);
+  console.log("COUNT", count);
+  const dispatch = useDispatch();
+
   const ref = useRef(null);
 
   const galleries: ItemWithLink[] = [
@@ -66,7 +74,10 @@ const LandingPage = () => {
   ];
   const isInView = useInView(ref, { once: true });
   const slideControls = useAnimation();
-
+  const item = {
+    title: "string",
+    id: "dsf",
+  };
   return (
     <motion.div
       variants={{
@@ -77,8 +88,27 @@ const LandingPage = () => {
       animate={"visible"}
       transition={{ duration: 0.4, delay: 0.2 }}
     >
-     
-
+      <button
+        onClick={() => {
+          dispatch(increment(item));
+        }}
+      >
+        Increment
+      </button>
+      <button
+        onClick={() => {
+          dispatch(decrement());
+        }}
+      >
+        Decrement
+      </button>
+      <div className="text-black">{count}</div>
+      {/* <ModalQuickView
+        isVisible={true}
+        onClose={(newValue) => {
+          // setQuickView(newValue);
+        }}
+      /> */}
       {/* <Banner /> */}
       <BannerVer2 />
       {/* <Policy /> */}

@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Thumbs, FreeMode } from "swiper/modules";
 import { bill, banner_gearvn, people02 } from "@/assets";
 
@@ -15,39 +15,38 @@ import "swiper/css/thumbs";
 
 export default () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
-
   const images = [bill, banner_gearvn, people02];
+  const [activeThumnail, setActiveThumnail] = useState<number>(0);
+
   return (
-    <div className="flex flex-col">
+    <div className="w-full">
       <Swiper
-        className="max-h-[800px]"
-        // install Swiper modules
+        className="h-[300px] sm:h-[600px] rounded-lg w-full"
         modules={[Pagination, A11y, Thumbs]}
         spaceBetween={50}
         slidesPerView={1}
-        // thumbs={{swiper: thumbs && !thumbs.?? thumbs : null}}
         thumbs={{ swiper: thumbsSwiper }}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        onSlideChange={(swiper) => setActiveThumnail(swiper.activeIndex)}
       >
         <SwiperSlide>
-          <img src={banner_gearvn.src} className="object-contain"></img>
+          <img src={banner_gearvn.src} className="object-contain "></img>
         </SwiperSlide>
 
         <SwiperSlide>
-          <img src={bill.src} className=" object-contain"></img>
+          <img src={bill.src} className="object-contain"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={bill.src} className=" object-contain"></img>
+          <img src={bill.src} className="object-contain"></img>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={bill.src} className=" object-contain"></img>
+          <img src={bill.src} className="object-contain"></img>
         </SwiperSlide>
       </Swiper>
 
       <Swiper
-        className="max-h-[100px]  mt-2"
+        className="max-h-[100px]  mt-2 w-full"
         onSwiper={setThumbsSwiper}
         slidesPerView={3}
         spaceBetween={10}
@@ -57,7 +56,7 @@ export default () => {
       >
         {images.map((image, idx) => (
           <SwiperSlide key={idx}>
-            <img src={image.src} className="border border-red" />
+            <img src={image.src} className={`${activeThumnail == idx ? "border-4 border-red" : "border-2 border-black"} `} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -26,9 +26,10 @@ import CarouselWith2Items from "./CarouselWith2Items";
 import SectionWithGallery from "./SectionWithGallery";
 import CarouselProductDescription from "./CarouselProductDescription";
 import BannerVer2 from "./BannerVer2";
-import Modal from "./Modal";
+import ModalQuickView from "./ModalQuickView";
 import Product from "./Product";
 import ProductDescription from "./ProductDescription";
+import CarouselQuickView from "./CarouselQuickView";
 export {
   CTA,
   NavbarComponent,
@@ -56,8 +57,9 @@ export {
   CarouselWith2Items,
   SectionWithGallery,
   BannerVer2,
-  Modal,
+  ModalQuickView,
   Product,
   ProductDescription,
   CarouselProductDescription,
+  CarouselQuickView,
 };

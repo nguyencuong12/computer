@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { bill, banner_gearvn } from "@/assets";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,7 +13,7 @@ import "swiper/css/scrollbar";
 export default () => {
   return (
     <Swiper
-      className="h-[300px] sm:h-[600px] rounded-lg bg-white"
+      className="h-[300px] sm:h-[300px] rounded-lg bg-white"
       // install Swiper modules
       modules={[Pagination, A11y]}
       spaceBetween={50}

@@ -19,10 +19,10 @@ const CarouselWith4Items = (props: propsItems) => {
   const { items } = props;
 
   return (
-    <div className="cursor-grab">
+    <div className="">
       <div className="hidden sm:block">
         <Swiper
-          className="min-h-[350px]"
+          className="min-h-[500px]"
           // install Swiper modules
           modules={[Pagination, A11y]}
           spaceBetween={50}
@@ -49,7 +49,7 @@ const CarouselWith4Items = (props: propsItems) => {
 
       <div className="block sm:hidden">
         <Swiper
-          className="min-h-[250px] block sm:hidden"
+          className="min-h-[360px] block sm:hidden"
           // install Swiper modules
           modules={[Pagination, A11y]}
           spaceBetween={50}
@@ -62,16 +62,15 @@ const CarouselWith4Items = (props: propsItems) => {
             return (
               <SwiperSlide
                 key={item.id}
-                className=" border border-white mt-4 max-h-[380px] min-h-[330px] overflow-hidden hover:-translate-y-1 hover:scale-110 duration-300"
+                className="border border-white mt-4 max-h-[380px] min-h-[330px] overflow-hidden hover:-translate-y-1 hover:scale-105 duration-300"
               >
-                <Link href={item.link ?? ""} className="h-full flex flex-col  mb-2 cursor-pointer hover:text-red text-white">
-                  <img src={item.image} alt={item.title} className="h-full bg-gray object-contain "></img>
-                  <p className="mt-2 px-2 "> {item.title}</p>
-                  <p className="mt-2 px-2 text-red font-bold">
-                    {FormatUtils.formatPriceVND(Number(item.price))}{" "}
-                    <del className="text-gray"> {FormatUtils.formatPriceVND(Number(item.beforeDiscount))}</del>
-                  </p>
-                </Link>
+                <Product
+                  link={item.link ?? ""}
+                  image={item.image ?? ""}
+                  title={item.title ?? ""}
+                  price={item.price ?? ""}
+                  beforeDiscount={item.beforeDiscount ?? ""}
+                ></Product>
               </SwiperSlide>
             );
           })}
