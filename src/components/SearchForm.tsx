@@ -16,14 +16,14 @@ const SearchForm = () => {
 
   return (
     <>
-      <form className={`mx-4 grow flex items-center justify-center`}>
-        <div className={`flex items-center relative  w-full max-w-[400px]`}>
+      <form className={` flex items-center justify-center flex-1  w-full  `}>
+        <div className={`flex items-center relative  w-full `}>
           <input
             type="text"
             placeholder="search something ..."
-            className={`outline-none  grow py-2 px-4 rounded-2xl bg-[#000008] opacity-25 text-white`}
+            className={`outline-none  grow py-2 px-4 rounded-md  border-2 border-slate-400/25 text-black`}
           ></input>
-          <button className="absolute right-0">
+          <button className="absolute right-2">
             <img src={search.src} alt="search button" className="w-8"></img>
           </button>
           {!checkEmptyResult() ? (

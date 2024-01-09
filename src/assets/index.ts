@@ -38,6 +38,8 @@ import case_computer from "./case_computer.png";
 import down_chevron from "./down_chevron.png";
 import logo_tokyo from "./logo_tokyo.png";
 import banner_gearvn from "./banner_gearvn.png";
+import error_404 from "./error404.png";
+
 export {
   case_computer,
   cpu,
@@ -77,4 +79,5 @@ export {
   down_chevron,
   logo_tokyo,
   banner_gearvn,
+  error_404
 };

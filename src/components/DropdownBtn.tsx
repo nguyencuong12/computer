@@ -6,7 +6,7 @@ interface dropdownProps {
   id: string;
   title: string;
   link: string;
-  subMenu: ProductInterface[];
+  subMenu: any;
   //   children: any[];
 }
 
@@ -23,11 +23,12 @@ const DropdownBtn = ({ id, title, link, subMenu }: dropdownProps) => {
           </div>
         </summary>
         <div className={`flex flex-col p-4 ${subMenu.length <= 0 ? "hidden" : "block"} divide-y-[2px] divide-slate-400/25 `}>
-          {subMenu.map((sub, index) => {
+          {subMenu.map((sub: any, index: number) => {
             return (
               <Link href={sub.link ?? ""} className="text-black font-simebold py-2" key={sub.id}>
                 {sub.title}
               </Link>
+              //FIXME:
             );
           })}
         </div>

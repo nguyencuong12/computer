@@ -22,18 +22,18 @@ const CarouselWith4Items = (props: propsItems) => {
     <div className="">
       <div className="hidden sm:block">
         <Swiper
-          className="min-h-[500px]"
+          className="min-h-[450px]"
           // install Swiper modules
           modules={[Pagination, A11y]}
           spaceBetween={50}
           slidesPerView={4}
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => {}}
+          onSlideChange={() => {}}
         >
           {items.map((item) => {
             return (
-              <SwiperSlide key={item.id} className=" border border-white mt-4 min-h-[410px] max-h-[430px] overflow-hidden">
+              <SwiperSlide key={item.id}>
                 <Product
                   link={item.link ?? ""}
                   image={item.image ?? ""}
@@ -49,21 +49,18 @@ const CarouselWith4Items = (props: propsItems) => {
 
       <div className="block sm:hidden">
         <Swiper
-          className="min-h-[360px] block sm:hidden"
+          className="min-h-[200px] block sm:hidden"
           // install Swiper modules
           modules={[Pagination, A11y]}
           spaceBetween={50}
           slidesPerView={2}
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => {}}
+          onSlideChange={() => {}}
         >
           {items.map((item) => {
             return (
-              <SwiperSlide
-                key={item.id}
-                className="border border-white mt-4 max-h-[380px] min-h-[330px] overflow-hidden hover:-translate-y-1 hover:scale-105 duration-300"
-              >
+              <SwiperSlide key={item.id} className=" ">
                 <Product
                   link={item.link ?? ""}
                   image={item.image ?? ""}

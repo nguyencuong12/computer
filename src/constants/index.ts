@@ -123,15 +123,22 @@ export const wide_nav = [
     subMenu: [
       {
         id: uuidv4(),
-        title: "MAY BO 1",
-        link: "/tu-build-pc",
-        subMenu: [],
-      },
-      {
-        id: uuidv4(),
-        title: "MAY BO 2",
-        link: "/tu-build-pc",
-        subMenu: [],
+        title: "PC Văn Phòng ",
+        link: "/may-bo/pc-van-phong",
+        subMenu: [
+          {
+            id: uuidv4(),
+            title: "PC Gaming ",
+            link: "/may-bo/pc-gaming",
+            subMenu: [],
+          },
+          {
+            id: uuidv4(),
+            title: "PC Đồ Họa ",
+            link: "/may-bo/pc-dohoa",
+            subMenu: [],
+          },
+        ],
       },
     ],
   },
@@ -271,64 +278,68 @@ export const wide_nav = [
 
 export const footerLinks = [
   {
-    title: "Useful Links",
+    title: "Giới Thiệu",
     links: [
       {
-        name: "Content",
+        name: "Giới thiệu HAICOMPUTER",
         link: "https://www.hoobank.com/content/",
       },
       {
-        name: "How it Works",
+        name: "Địa chỉ cửa hàng",
         link: "https://www.hoobank.com/how-it-works/",
       },
       {
-        name: "Create",
+        name: "Điều khoản giao dịch",
         link: "https://www.hoobank.com/create/",
       },
       {
-        name: "Explore",
+        name: "Bảo mật thông tin",
         link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
       },
     ],
   },
   {
-    title: "Community",
+    title: "Chính Sách HAICOMPUTER",
     links: [
       {
-        name: "Help Center",
+        name: "Chính sách giao nhận",
         link: "https://www.hoobank.com/help-center/",
       },
       {
-        name: "Partners",
+        name: "Chính sách đổi trả hàng",
         link: "https://www.hoobank.com/partners/",
       },
       {
-        name: "Suggestions",
+        name: "Chính sách bảo hành",
         link: "https://www.hoobank.com/suggestions/",
       },
       {
-        name: "Blog",
+        name: "Hướng dẫn thanh toán",
         link: "https://www.hoobank.com/blog/",
       },
       {
-        name: "Newsletters",
+        name: "Trả góp",
         link: "https://www.hoobank.com/newsletters/",
       },
     ],
   },
   {
-    title: "Partner",
+    title: "Hỗ trợ khách hàng",
     links: [
       {
-        name: "Our Partner",
+        name: "Mua hàng",
         link: "https://www.hoobank.com/our-partner/",
       },
       {
-        name: "Become a Partner",
+        name: "Bảo hành",
+        link: "https://www.hoobank.com/become-a-partner/",
+      },
+      {
+        name: "Hỗ trợ khách hàng ",
+        link: "https://www.hoobank.com/become-a-partner/",
+      },
+      {
+        name: "Tra cứu đơn hàng đã mua  ",
         link: "https://www.hoobank.com/become-a-partner/",
       },
     ],

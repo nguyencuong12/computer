@@ -20,10 +20,10 @@ import {
 import { bill } from "@/assets";
 import { useSelector, useDispatch } from "react-redux";
 import { showQuickView, closeQuickView, isOpenQuickView } from "@/store/slices/quickViewProduct";
+import styles from "@/app/style";
 const LandingPage = () => {
   const dispatch = useDispatch();
   const isOpenModal = useSelector(isOpenQuickView);
-
 
   const ref = useRef(null);
 
@@ -87,22 +87,21 @@ const LandingPage = () => {
       animate={"visible"}
       transition={{ duration: 0.4, delay: 0.2 }}
     >
-    
-
       <ModalQuickView isVisible={isOpenModal} />
-      {/* <Banner /> */}
+
       <BannerVer2 />
-      {/* <Policy /> */}
-      <SectionWithGallery title="Sản phẩm bán chạy" categories={[]} galleries={galleries}></SectionWithGallery>
-      <SectionWithGallery title="Sản phẩm bán chạy" categories={[]} galleries={galleries}></SectionWithGallery>
-
-      {/* 
-      <BusinessComponent />
-
-      <CardDealComponent />
-
-      <Testimonials /> */}
-      <Clients />
+      <div className={`${styles.boxWidth} m-auto`}>
+        <SectionWithGallery banner="" title="PC Máy bộ" categories={[]} galleries={galleries}></SectionWithGallery>
+      </div>
+      <div className={`${styles.boxWidth} m-auto`}>
+        <SectionWithGallery title="Ổ cứng SSD" categories={[]} galleries={galleries}></SectionWithGallery>
+      </div>
+      <div className={`${styles.boxWidth} m-auto`}>
+        <SectionWithGallery title="RAM PC" categories={[]} galleries={galleries}></SectionWithGallery>
+      </div>
+      <div className={`${styles.boxWidth} m-auto`}>
+        <SectionWithGallery title="Gaming Gear" categories={[]} galleries={galleries}></SectionWithGallery>
+      </div>
     </motion.div>
   );
 };
