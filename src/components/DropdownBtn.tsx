@@ -11,7 +11,7 @@ interface dropdownProps {
 }
 
 const DropdownBtn = ({ id, title, link, subMenu }: dropdownProps) => {
-  return (
+  return ( 
     <div className="p-1 min-w-[250px] cursor-pointer">
       <details className="bg-white shadow rounded group">
         <summary className="list-none flex flex-wrap items-center">
