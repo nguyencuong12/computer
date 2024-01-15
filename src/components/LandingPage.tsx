@@ -70,6 +70,27 @@ const LandingPage = () => {
       beforeDiscount: "100000",
       image: bill.src,
     },
+    {
+      id: uuidv4(),
+      title: "This is titel",
+      price: "500000",
+      beforeDiscount: "100000",
+      image: bill.src,
+    },
+    {
+      id: uuidv4(),
+      title: "This is titel",
+      price: "500000",
+      beforeDiscount: "100000",
+      image: bill.src,
+    },
+    {
+      id: uuidv4(),
+      title: "This is titel",
+      price: "500000",
+      beforeDiscount: "100000",
+      image: bill.src,
+    },
   ];
   const isInView = useInView(ref, { once: true });
   const slideControls = useAnimation();

@@ -1,13 +1,14 @@
 "use client";
 import styles from "@/app/style";
-import { logo, logo_tokyo } from "@/assets";
+import { fishing_logo } from "@/assets";
 import { footerLinks, socialMedia } from "../constants";
 import Link from "next/link";
+
 const Footer = () => (
   <section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
     <div className={`${styles.flexStart}  flex-col mb-10 w-full`}>
       <Link href="/" className={`w-full flex flex-col justify-center items-center mb-4`}>
-        <img src={logo_tokyo.src} alt="hoobank" className="w-[350px] h-[100.14px] object-contain" />
+        <img src={fishing_logo.src} alt="hoobank" className="w-[350px] h-[100.14px] object-contain" />
       </Link>
 
       <div className=" w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">

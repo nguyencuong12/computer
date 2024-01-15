@@ -30,11 +30,11 @@ const Product = (props: propsInterface) => {
   };
 
   return (
-    <div className="border border-[#EDEDED] relative group/item p-4 rounded-lg h-full  ">
+    <div className="border border-[#EDEDED] text-red relative group/item  rounded-lg h-full z-50">
       <Link href={link} className="flex flex-col  mb-2 cursor-pointer hover:text-red text-white gap-4 h-full">
-        <div className="transition-all ease-in-out duration-300 h-[100%] bg-center bg-contain  bg-no-repeat  bg-[url('https://tokyocamera.vn/wp-content/uploads/2023/03/DJI-Avata-Pro-View-Combo-2-510x510.jpg')] hover:bg-[url('https://tokyocamera.vn/wp-content/uploads/2023/03/Insta360-Titan-Chinh-hang-247x296.jpg')]"></div>
-        <p className="text-black font-semibold text-lg truncate py-2"> {title}</p>
-        <p className="text-red font-bold">
+        <div className="border-8 border-[#EDEDED] rounded transition-all ease-in-out duration-300 h-[100%] bg-center bg-contain  bg-no-repeat  bg-[url('https://tokyocamera.vn/wp-content/uploads/2023/03/DJI-Avata-Pro-View-Combo-2-510x510.jpg')] hover:bg-[url('https://tokyocamera.vn/wp-content/uploads/2023/03/Insta360-Titan-Chinh-hang-247x296.jpg')]"></div>
+        <p className="text-black font-semibold text-lg truncate px-2"> {title}</p>
+        <p className="text-red font-bold px-2">
           {FormatUtils.formatPriceVND(Number(price))} <del className="text-gray"> {FormatUtils.formatPriceVND(Number(beforeDiscount))}</del>
         </p>
       </Link>

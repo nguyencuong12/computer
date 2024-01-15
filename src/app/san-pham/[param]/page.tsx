@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { ProductDescription } from "@/components";
+import styles from "@/app/style";
 
 const SanphamWithID = () => {
   const router = useParams();
@@ -13,7 +14,7 @@ const SanphamWithID = () => {
     }
   }, [router]);
   return (
-    <div>
+    <div className={`${styles.boxWidth} m-auto`}>
       <div role="status" className={`h-96 flex justify-center items-center ${loading ? "flex" : "hidden"} `}>
         <svg
           aria-hidden="true"

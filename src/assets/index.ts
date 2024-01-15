@@ -39,8 +39,30 @@ import down_chevron from "./down_chevron.png";
 import logo_tokyo from "./logo_tokyo.png";
 import banner_gearvn from "./banner_gearvn.png";
 import error_404 from "./error404.png";
-
+import fishing_logo from "./fishing_logo.png";
+import aocauca from "./aocauca.png";
+import cancaumay from "./cancaumay.png";
+import cancautay from "./cancaumay.png";
+import daycauca from "./daycauca.png";
+import ducauca from "./ducauca.png";
+import luoicau from "./luoicau.png";
+import moicau from "./moicau.png";
+import phaocauca from "./phaocauca.png";
+import phukien from "./phukien.png";
+import thungcauca from "./thungcauca.png";
+import votcauca from "./votcauca.png";
 export {
+  aocauca,
+  cancaumay,
+  cancautay,
+  daycauca,
+  ducauca,
+  luoicau,
+  moicau,
+  phaocauca,
+  phukien,
+  thungcauca,
+  votcauca,
   case_computer,
   cpu,
   computer,
@@ -79,5 +101,6 @@ export {
   down_chevron,
   logo_tokyo,
   banner_gearvn,
-  error_404
+  error_404,
+  fishing_logo,
 };

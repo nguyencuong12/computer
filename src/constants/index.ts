@@ -21,6 +21,17 @@ import {
   keyboard,
   laptop,
   case_computer,
+  moicau,
+  cancautay,
+  cancaumay,
+  phukien,
+  phaocauca,
+  ducauca,
+  aocauca,
+  luoicau,
+  thungcauca,
+  votcauca,
+  daycauca,
 } from "@/assets";
 import { v4 as uuidv4 } from "uuid";
 
@@ -110,32 +121,152 @@ export const navLinks = [
 export const wide_nav = [
   {
     id: uuidv4(),
-    title: "Tự build pc",
-    link: "/tu-build-pc",
-    src: computer.src,
-    subMenu: [],
-  },
-  {
-    id: uuidv4(),
-    title: "Máy bộ",
-    link: "/may-bo",
-    src: case_computer.src,
+    title: "Mồi câu cá",
+    link: "/moi-cau-ca",
+    src: moicau.src,
     subMenu: [
       {
         id: uuidv4(),
-        title: "PC Văn Phòng ",
-        link: "/may-bo/pc-van-phong",
+        title: "Mồi câu cá dạng bột",
+        link: "/moi-cau-ca-bot",
         subMenu: [
           {
             id: uuidv4(),
-            title: "PC Gaming ",
+            title: "Cám câu cá tổng hợp CDC",
             link: "/may-bo/pc-gaming",
-            subMenu: [],
           },
           {
             id: uuidv4(),
-            title: "PC Đồ Họa ",
+            title: "Cám nền mịn tổng hợp CDC (Cám xã)",
             link: "/may-bo/pc-dohoa",
+          },
+          {
+            id: uuidv4(),
+            title: "Bột tôm CDC",
+            link: "/may-bo/pc-dohoa",
+          },
+          {
+            id: uuidv4(),
+            title: "Mồi câu cá khó chịu",
+            link: "/may-bo/pc-dohoa",
+          },
+          {
+            id: uuidv4(),
+            title: "Mồi câu cá khó chịu",
+            link: "/may-bo/pc-dohoa",
+          },
+        ],
+      },
+      {
+        id: uuidv4(),
+        title: "Phụ gia câu cá",
+        link: "/moi-cau-ca-bot",
+        subMenu: [
+          {
+            id: uuidv4(),
+            title: "Bột tơ nhện",
+            link: "/may-bo/pc-gaming",
+          },
+          {
+            id: uuidv4(),
+            title: "Bông tuyết",
+            link: "/may-bo/pc-dohoa",
+          },
+        ],
+      },
+      {
+        id: uuidv4(),
+        title: "Tinh mùi",
+        link: "/moi-cau-ca-bot",
+        subMenu: [
+          {
+            id: uuidv4(),
+            title: "Tinh mùi CDC (Bắp sữa ) ",
+            link: "/may-bo/pc-gaming",
+          },
+          {
+            id: uuidv4(),
+            title: "Tinh mùi CDC (Khóm sữa) ",
+            link: "/may-bo/pc-gaming",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    title: "Cần câu tay",
+    link: "/man-hinh",
+    src: cancautay.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "Cần câu tay giá rẻ",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+      {
+        id: uuidv4(),
+        title: "Cần câu tay tầm trung",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    title: "Cần câu máy",
+    link: "/man-hinh",
+    src: cancaumay.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "Cần câu tay giá rẻ",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+      {
+        id: uuidv4(),
+        title: "Cần câu tay tầm trung",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    title: "Dây câu",
+    link: "/laptop",
+    src: daycauca.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "Thẻo tóm sẵn",
+        link: "/tu-build-pc",
+        subMenu: [
+          {
+            id: uuidv4(),
+            title: "Dây trục & thẻo",
+            link: "/tu-build-pc",
+            subMenu: [],
+          },
+          {
+            id: uuidv4(),
+            title: "Dây thẻo ",
+            link: "/tu-build-pc",
+            subMenu: [],
+          },
+          {
+            id: uuidv4(),
+            title: "Dây trục ",
+            link: "/tu-build-pc",
+            subMenu: [],
+          },
+
+          {
+            id: uuidv4(),
+            title: "Dây PE",
+            link: "/tu-build-pc",
             subMenu: [],
           },
         ],
@@ -144,37 +275,9 @@ export const wide_nav = [
   },
   {
     id: uuidv4(),
-    title: "Màn hình",
-    link: "/man-hinh",
-    src: moniter.src,
-    subMenu: [
-      {
-        id: uuidv4(),
-        title: "MAY BO 1",
-        link: "/tu-build-pc",
-        subMenu: [],
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    title: "Laptop",
-    link: "/laptop",
-    src: laptop.src,
-    subMenu: [
-      {
-        id: uuidv4(),
-        title: "MAY BO 1",
-        link: "/tu-build-pc",
-        subMenu: [],
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    title: "Bàn phím",
+    title: "Phụ kiện",
     link: "/ban-phim",
-    src: keyboard.src,
+    src: phukien.src,
     subMenu: [
       {
         id: uuidv4(),
@@ -186,57 +289,9 @@ export const wide_nav = [
   },
   {
     id: uuidv4(),
-    title: "Chuột",
-    link: "/chuot",
-    src: mouse.src,
-    subMenu: [
-      {
-        id: uuidv4(),
-        title: "MAY BO 1",
-        link: "/tu-build-pc",
-        subMenu: [
-          {
-            id: uuidv4(),
-            title: "May bo tu build 1 ",
-            link: "sdq",
-          },
-          {
-            id: uuidv4(),
-            title: "May bo tu build 2 May bo tu build 2  ",
-            link: "sdq",
-          },
-        ],
-      },
-      {
-        id: uuidv4(),
-        title: "MAY BO 2",
-        link: "/tu-build-pc2",
-        subMenu: [],
-      },
-      {
-        id: uuidv4(),
-        title: "MAY BO 1",
-        link: "/tu-build-pc",
-        subMenu: [
-          {
-            id: uuidv4(),
-            title: "May bo tu build 1 ",
-            link: "sdq",
-          },
-          {
-            id: uuidv4(),
-            title: "May bo tu build 2 ",
-            link: "sdq",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: uuidv4(),
-    title: "Tai nghe",
-    link: "/tai-nghe",
-    src: headphone.src,
+    title: "Phao câu cá",
+    link: "/ban-phim",
+    src: phaocauca.src,
     subMenu: [
       {
         id: uuidv4(),
@@ -248,9 +303,9 @@ export const wide_nav = [
   },
   {
     id: uuidv4(),
-    title: "CPU",
-    link: "/cpu",
-    src: cpu.src,
+    title: "Ô câu cá",
+    link: "/ban-phim",
+    src: ducauca.src,
     subMenu: [
       {
         id: uuidv4(),
@@ -262,9 +317,69 @@ export const wide_nav = [
   },
   {
     id: uuidv4(),
-    title: "Ram",
-    link: "/ram",
-    src: ram.src,
+    title: "Áo chống nắng đi câu",
+    link: "/ban-phim",
+    src: aocauca.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "MAY BO 1",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    title: "Lưỡi câu",
+    link: "/ban-phim",
+    src: luoicau.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "Lưỡi câu rẻ tiền",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+      {
+        id: uuidv4(),
+        title: "Lưỡi câu cá rô đồng",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+      {
+        id: uuidv4(),
+        title: "Lưỡi câu có ngạnh",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+      {
+        id: uuidv4(),
+        title: "Lưỡi câu có ngạnh",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    title: "Thùng câu cá",
+    link: "/ban-phim",
+    src: thungcauca.src,
+    subMenu: [
+      {
+        id: uuidv4(),
+        title: "MAY BO 1",
+        link: "/tu-build-pc",
+        subMenu: [],
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    title: "Vợt,gác cần,rọng cá",
+    link: "/ban-phim",
+    src: votcauca.src,
     subMenu: [
       {
         id: uuidv4(),
@@ -275,6 +390,172 @@ export const wide_nav = [
     ],
   },
 ];
+// export const wide_nav = [
+//   {
+//     id: uuidv4(),
+//     title: "Tự build pc",
+//     link: "/tu-build-pc",
+//     src: computer.src,
+//     subMenu: [],
+//   },
+//   {
+//     id: uuidv4(),
+//     title: "Máy bộ",
+//     link: "/may-bo",
+//     src: case_computer.src,
+//     subMenu: [
+//       {
+//         id: uuidv4(),
+//         title: "PC Văn Phòng ",
+//         link: "/may-bo/pc-van-phong",
+//         subMenu: [
+//           {
+//             id: uuidv4(),
+//             title: "PC Gaming ",
+//             link: "/may-bo/pc-gaming",
+//           },
+//           {
+//             id: uuidv4(),
+//             title: "PC Đồ Họa ",
+//             link: "/may-bo/pc-dohoa",
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     id: uuidv4(),
+//     title: "Màn hình",
+//     link: "/man-hinh",
+//     src: moniter.src,
+//     subMenu: [
+//       {
+//         id: uuidv4(),
+//         title: "MAY BO 1",
+//         link: "/tu-build-pc",
+//         subMenu: [],
+//       },
+//     ],
+//   },
+//   {
+//     id: uuidv4(),
+//     title: "Laptop",
+//     link: "/laptop",
+//     src: laptop.src,
+//     subMenu: [
+//       {
+//         id: uuidv4(),
+//         title: "MAY BO 1",
+//         link: "/tu-build-pc",
+//         subMenu: [],
+//       },
+//     ],
+//   },
+//   {
+//     id: uuidv4(),
+//     title: "Bàn phím",
+//     link: "/ban-phim",
+//     src: keyboard.src,
+//     subMenu: [
+//       {
+//         id: uuidv4(),
+//         title: "MAY BO 1",
+//         link: "/tu-build-pc",
+//         subMenu: [],
+//       },
+//     ],
+//   },
+//   {
+//     id: uuidv4(),
+//     title: "Chuột",
+//     link: "/chuot",
+//     src: mouse.src,
+//     subMenu: [
+//       {
+//         id: uuidv4(),
+//         title: "MAY BO 1",
+//         link: "/tu-build-pc",
+//         subMenu: [
+//           {
+//             id: uuidv4(),
+//             title: "May bo tu build 1 ",
+//             link: "sdq",
+//           },
+//           {
+//             id: uuidv4(),
+//             title: "May bo tu build 2 May bo tu build 2  ",
+//             link: "sdq",
+//           },
+//         ],
+//       },
+//       {
+//         id: uuidv4(),
+//         title: "MAY BO 2",
+//         link: "/tu-build-pc2",
+//         subMenu: [],
+//       },
+//       {
+//         id: uuidv4(),
+//         title: "MAY BO 1",
+//         link: "/tu-build-pc",
+//         subMenu: [
+//           {
+//             id: uuidv4(),
+//             title: "May bo tu build 1 ",
+//             link: "sdq",
+//           },
+//           {
+//             id: uuidv4(),
+//             title: "May bo tu build 2 ",
+//             link: "sdq",
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     id: uuidv4(),
+//     title: "Tai nghe",
+//     link: "/tai-nghe",
+//     src: headphone.src,
+//     subMenu: [
+//       {
+//         id: uuidv4(),
+//         title: "MAY BO 1",
+//         link: "/tu-build-pc",
+//         subMenu: [],
+//       },
+//     ],
+//   },
+//   {
+//     id: uuidv4(),
+//     title: "CPU",
+//     link: "/cpu",
+//     src: cpu.src,
+//     subMenu: [
+//       {
+//         id: uuidv4(),
+//         title: "MAY BO 1",
+//         link: "/tu-build-pc",
+//         subMenu: [],
+//       },
+//     ],
+//   },
+//   {
+//     id: uuidv4(),
+//     title: "Ram",
+//     link: "/ram",
+//     src: ram.src,
+//     subMenu: [
+//       {
+//         id: uuidv4(),
+//         title: "MAY BO 1",
+//         link: "/tu-build-pc",
+//         subMenu: [],
+//       },
+//     ],
+//   },
+// ];
 
 export const footerLinks = [
   {
