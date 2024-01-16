@@ -22,6 +22,7 @@ export class ProductsService {
   async findAll(): Promise<Products[]> {
     return await this.productModel
       .find({ title: { $regex: 'tanic', $options: 'i' } })
+      //OPTIONS "i" is for case insensitive match
       .exec();
   }
 
