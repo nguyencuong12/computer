@@ -6,11 +6,23 @@ import { ProductsModule } from './products/products.module';
 import { CategoriesModule } from './categories/categories.module';
 import { SearchModule } from './search/search.module';
 import config from './config/keys';
+import { join } from 'path';
+import { ServeStaticModule } from '@nestjs/serve-static';
 
 // MongooseModule.forRoot('mongodb://localhost/fishing')
 
 @Module({
   imports: [
+
+    // ServeStaticModule.forRoot({
+    //   rootPath: join(__dirname, '..', 'client'),
+      
+    //   serveStaticOptions: {
+        
+       
+    //     index: false,
+    //   },
+    // }),
     MongooseModule.forRoot(config.mongoURI),
     ProductsModule,
     CategoriesModule,

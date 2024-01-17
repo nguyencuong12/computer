@@ -15,15 +15,16 @@ export class ProductsService {
 
   async create(createProductDto: CreateProductDto): Promise<Products> {
     // return 'This action adds a new product';
-    const createdProduct = new this.productModel(CreateProductDto);
+    const createdProduct = new this.productModel(createProductDto);
+    // createProductDto.
     return createdProduct.save();
   }
 
   async findAll(): Promise<Products[]> {
-    return await this.productModel
-      .find({ title: { $regex: 'tanic', $options: 'i' } })
-      //OPTIONS "i" is for case insensitive match
-      .exec();
+    // var s = await this.productModel
+    //   .find({ title: { $regex: 'tanic', $options: 'i' } })
+    //   .exec();
+    return await this.productModel.find().exec();
   }
 
   findOne(id: number) {
@@ -31,10 +32,14 @@ export class ProductsService {
   }
 
   update(id: number, updateProductDto: UpdateProductDto) {
+    // updateProductDto.images
     return `This action updates a #${id} product`;
   }
 
   remove(id: number) {
     return `This action removes a #${id} product`;
   }
+}
+function ISODate(arg0: string) {
+  throw new Error('Function not implemented.');
 }
