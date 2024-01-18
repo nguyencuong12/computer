@@ -13,8 +13,9 @@ export class AuthService {
 
   async validateUser(username: string, password: string): Promise<any> {
     const user = await this.userService.findUser(username);
-    console.log('VALIDATE CALL');
+
     const isPasswordMatch = await bcrypt.compare(password, user.password);
+
     if (user && isPasswordMatch) {
       return user;
     }
@@ -27,6 +28,10 @@ export class AuthService {
       sub: user._id,
       roles: user.roles,
     };
+    return {
+      access_token: this.jwtService.sign(payload),
+    };
+
     // return {
     //   access_token: this.jwtService.sign(payload),
     // };
@@ -44,7 +49,7 @@ export class AuthService {
         username: user.username,
         roles: user.role,
       };
-      console.log('ROLES', user.role);
+
       var access_token = await this.jwtService.signAsync(payload);
       console.log('ACCESS_TOKEN', access_token);
       return {

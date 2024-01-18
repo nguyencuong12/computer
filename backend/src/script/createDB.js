@@ -26,6 +26,12 @@ db.users.insertMany([
       password:"$2b$10$Uj9PgfI8PZ9FVrvyN7ogNes.lj6acSmoOtiKksPGO4Jq1OkqWBLWi",
       email:"ffgcuong@gmail.com",
       role:'admin'
+   },
+   {
+      username:"cuong",
+      password:"$2b$10$Uj9PgfI8PZ9FVrvyN7ogNes.lj6acSmoOtiKksPGO4Jq1OkqWBLWi",
+      email:"ffgcuong@gmail.com",
+      role:'user'
    }
 ])
 

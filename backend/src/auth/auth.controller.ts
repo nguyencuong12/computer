@@ -14,7 +14,7 @@ import { RolesGuard } from './guard/roles.guard';
 import { Roles } from './decorators/role.decorator';
 import { Role } from './enums/role.enum';
 import { LoginDTO } from './dto/LoginDto';
-import { AuthGuard } from './guard/auth.guard';
+
 @Controller('auth')
 export class AuthController {
   constructor(
@@ -33,13 +33,20 @@ export class AuthController {
     return this.authService.signIn(loginDTO);
   }
 
-  @UseGuards(AuthGuard)
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.User)
   @Get('/profile')
   getProfile(@Request() req) {
     return req.user;
   }
 
-  //FOR ADMIN
+  //   @UseGuards(JwtAuthGuard, RolesGuard)
+  //   @Roles(Role.User)
+  //   @Get('/user')
+  //   getProfile(@Request() req) {
+  //     return req.user;
+  //   }
+
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.Admin)
   @Get('/admin')
