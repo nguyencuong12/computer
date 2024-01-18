@@ -4,6 +4,7 @@ import { UpdateProductDto } from './dto/update-product.dto';
 import { Model } from 'mongoose';
 import { Products } from './schemas/product.schema';
 import { InjectModel } from '@nestjs/mongoose';
+import { FilterProductDTO } from './dto/filter-product.dto';
 
 @Injectable()
 export class ProductsService {
@@ -19,25 +20,49 @@ export class ProductsService {
     // createProductDto.
     return createdProduct.save();
   }
+  async getProductsWithFilter(
+    filterProductDTO: FilterProductDTO,
+  ): Promise<Products[]> {
+    const { search, category } = filterProductDTO;
 
-  async findAll(): Promise<Products[]> {
-    // var s = await this.productModel
-    //   .find({ title: { $regex: 'tanic', $options: 'i' } })
-    //   .exec();
+    let products = await this.productModel.find().exec();
+    if (search) {
+      products.filter(
+        (product) =>
+          product.name.includes(search) || product.description.includes(search),
+      );
+    }
+    if (category) {
+      products = products.filter(
+        (product) => product.category.toLowerCase() === category.toLowerCase(),
+      );
+    }
+    return products;
+  }
+
+  async getAllProducts(): Promise<Products[]> {
     return await this.productModel.find().exec();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} product`;
+  async getProductByID(id: string): Promise<Products> {
+    const product = await this.productModel.findById(id);
+    return product;
   }
 
-  update(id: number, updateProductDto: UpdateProductDto) {
+  async update(id: string, updateProductDto: UpdateProductDto) {
     // updateProductDto.images
-    return `This action updates a #${id} product`;
+    const updateProduct = await this.productModel.findByIdAndUpdate(
+      id,
+      updateProductDto,
+    );
+    return updateProduct;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} product`;
+  async remove(id: string) {
+    const deleteProduct = await this.productModel.findByIdAndDelete(id);
+    return deleteProduct;
+
+    // return `This action removes a #${id} product`;
   }
 }
 function ISODate(arg0: string) {

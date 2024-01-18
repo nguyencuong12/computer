@@ -9,9 +9,9 @@ interface sizeInterfaces {
 
 @Schema({ versionKey: false })
 export class Products {
-  @Prop({ required: true, unique: true })
+  @Prop({ required: true, unique: true,trim:true })
   name: string;
-  @Prop({ required: true })
+  @Prop({ required: true ,trim:true})
   description: string;
   @Prop()
   price: number;
@@ -31,6 +31,8 @@ export class Products {
   brand: string;
   @Prop()
   sku: string;
+  @Prop()
+  category: string;
   // @Prop()
   // quatity:number;
   // @Prop()

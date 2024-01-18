@@ -19,6 +19,7 @@ export class CreateProductDto {
   dateModify: string;
   brand: string;
   sku: string;
+  category: string;
 
   sizes: sizeInterfaces[];
 

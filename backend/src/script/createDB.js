@@ -19,6 +19,16 @@ var db = connect("localhost:27017/fishingDB");
 //       ]
 //    }
 // ])
+
+db.users.insertMany([
+   {
+      username:"admin",
+      password:"$2b$10$Uj9PgfI8PZ9FVrvyN7ogNes.lj6acSmoOtiKksPGO4Jq1OkqWBLWi",
+      email:"ffgcuong@gmail.com",
+      role:'admin'
+   }
+])
+
 db.products.insertMany( [
     {
         name: 'Tơ nhện mini',
@@ -29,6 +39,7 @@ db.products.insertMany( [
         creatorPerson:"",
         dateCreated:Date(),
         dateModify:Date(),
+        category:"Tơ nhện",
         sizes:[]
 
     },
@@ -40,8 +51,9 @@ db.products.insertMany( [
       images:[],
       comments:[],
       creatorPerson:"",
-      dateCreated:Date.now(),
-      dateModify:Date.now(),
+      dateCreated:Date(),
+      dateModify:Date(),
+      category:"Cần câu tay",
       sizes:[
          {
             size:"4h",
