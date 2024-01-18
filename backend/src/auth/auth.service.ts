@@ -47,6 +47,9 @@ export class AuthService {
       console.log('ROLES', user.role);
       var access_token = await this.jwtService.signAsync(payload);
       console.log('ACCESS_TOKEN', access_token);
+      return {
+        access_token: await this.jwtService.signAsync(payload),
+      };
       //TESTING EXTRACT TOKEN PACKAGE !!!
       //   const payload_ex = await this.jwtService.verifyAsync(access_token, {
       //     secret: process.env.JWT_SECRET,
@@ -56,7 +59,6 @@ export class AuthService {
       //   return {
       //     access_token: await this.jwtService.signAsync(payload),
       //   };
-      
     }
   }
 }
