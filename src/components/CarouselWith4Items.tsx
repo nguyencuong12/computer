@@ -40,14 +40,8 @@ const CarouselWith4Items = (props: propsItems) => {
         >
           {items.map((item) => {
             return (
-              <SwiperSlide key={item.id}>
-                <Product
-                  link={item.link ?? "/san-pham/qsd"}
-                  image={item.image ?? ""}
-                  title={item.title ?? ""}
-                  price={item.price ?? ""}
-                  beforeDiscount={item.beforeDiscount ?? ""}
-                ></Product>
+              <SwiperSlide key={item._id}>
+                <Product link={""} images={item.images ? item.images : []} title={item.name} price={item.price?.toString() ?? ""}></Product>
               </SwiperSlide>
             );
           })}
@@ -67,14 +61,16 @@ const CarouselWith4Items = (props: propsItems) => {
         >
           {items.map((item) => {
             return (
-              <SwiperSlide key={item.id} className=" ">
-                <Product
+              <SwiperSlide key={item._id} className=" ">
+                <Product link={""} images={item.images ? item.images : []} title={item.name} price={item.price?.toString() ?? ""}></Product>
+
+                {/* <Product
                   link={item.link ?? ""}
                   image={item.image ?? ""}
                   title={item.title ?? ""}
                   price={item.price ?? ""}
                   beforeDiscount={item.beforeDiscount ?? ""}
-                ></Product>
+                ></Product> */}
               </SwiperSlide>
             );
           })}

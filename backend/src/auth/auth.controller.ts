@@ -31,21 +31,15 @@ export class AuthController {
   @Post('/login')
   async login(@Body() loginDTO: LoginDTO) {
     return this.authService.signIn(loginDTO);
+    //SEND BACK ACCESS_TOKEN CLIENT WILL STORE IT
   }
 
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.User)
   @Get('/profile')
-  getProfile(@Request() req) {
+  async getProfile(@Request() req) {
     return req.user;
   }
-
-  //   @UseGuards(JwtAuthGuard, RolesGuard)
-  //   @Roles(Role.User)
-  //   @Get('/user')
-  //   getProfile(@Request() req) {
-  //     return req.user;
-  //   }
 
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles(Role.Admin)

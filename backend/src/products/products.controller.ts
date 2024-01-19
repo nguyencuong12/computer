@@ -14,6 +14,7 @@ import {
   BadRequestException,
   Query,
   NotFoundException,
+  UseGuards,
 } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/create-product.dto';
@@ -23,11 +24,21 @@ import { diskStorage } from 'multer';
 import { v4 as uuidv4 } from 'uuid';
 import { FilterProductDTO } from './dto/filter-product.dto';
 
+import { JwtAuthGuard } from '../auth/guard/jwt.guard';
+import { RolesGuard } from '../auth/guard/roles.guard';
+import { Roles } from '../auth/decorators/role.decorator';
+import { Role } from '../auth/enums/role.enum';
+
+import * as fs from 'fs';
+import path from 'path';
+
 @Controller('products')
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
   @Post()
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.Admin)
   @UseInterceptors(
     FilesInterceptor('files', null, {
       storage: diskStorage({
@@ -44,12 +55,13 @@ export class ProductsController {
   ) {
     //FIXME: ERROR REQUEST STILL ADDING IMAGES FIND SOLUTION TO BLOCK ADD IMAGES WHEN FACING ERROR !!
     try {
-      createProductDto.images = files.map((file) => {
-        return file.filename;
-      });
+      if (files.length > 0) {
+        createProductDto.images = files.map((file) => {
+          return file.filename;
+        });
+      }
       return await this.productsService.create(createProductDto);
     } catch (err) {
-      console.log('ERROR CALL');
       if (err.code == 11000)
         throw new HttpException(
           `Product already exist can't create`,
@@ -57,11 +69,15 @@ export class ProductsController {
         );
     }
   }
+
+  // @UseGuards(JwtAuthGuard, RolesGuard)
+  // @Roles(Role.Admin)
   @Get('')
   async getProducts(@Query() filterProductDTO: FilterProductDTO) {
     if (Object.keys(filterProductDTO).length) {
       const filteredProducts =
         await this.productsService.getProductsWithFilter(filterProductDTO);
+
       return filteredProducts;
     } else {
       return await this.productsService.getAllProducts();
@@ -74,18 +90,21 @@ export class ProductsController {
     if (!product) throw new NotFoundException('Product does not exist!');
   }
 
+  // @UseGuards(JwtAuthGuard, RolesGuard)
+  // @Roles(Role.Admin)
   @Patch(':id')
   async update(
     @Param('id') id: string,
     @Body() updateProductDto: UpdateProductDto,
   ) {
+    console.log('ID', id);
     // return this.productsService.update(+id, updateProductDto);
-
     const product = await this.productsService.update(id, updateProductDto);
     if (!product) throw new NotFoundException('Product does not exist!');
     return product;
   }
-
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.Admin)
   @Delete(':id')
   async remove(@Param('id') id: string) {
     let product = await this.productsService.remove(id);

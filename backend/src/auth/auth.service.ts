@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { UserService } from '../user/user.service';
 import * as bcrypt from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
@@ -11,34 +11,11 @@ export class AuthService {
     private readonly jwtService: JwtService,
   ) {}
 
-  async validateUser(username: string, password: string): Promise<any> {
-    const user = await this.userService.findUser(username);
-
-    const isPasswordMatch = await bcrypt.compare(password, user.password);
-
-    if (user && isPasswordMatch) {
-      return user;
-    }
-    return null;
-  }
-
-  async login(user: any) {
-    const payload = {
-      username: user.username,
-      sub: user._id,
-      roles: user.roles,
-    };
-    return {
-      access_token: this.jwtService.sign(payload),
-    };
-
-    // return {
-    //   access_token: this.jwtService.sign(payload),
-    // };
-  }
-
   async signIn(userInfo: LoginDTO) {
     const user = await this.userService.findUser(userInfo.username);
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
     const isPasswordMatch = await bcrypt.compare(
       userInfo.password,
       user.password,
@@ -48,10 +25,9 @@ export class AuthService {
         sub: user['_id'],
         username: user.username,
         roles: user.role,
+        thisistest: '',
       };
-
-      var access_token = await this.jwtService.signAsync(payload);
-      console.log('ACCESS_TOKEN', access_token);
+      //   var access_token = await this.jwtService.signAsync(payload);
       return {
         access_token: await this.jwtService.signAsync(payload),
       };

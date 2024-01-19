@@ -27,11 +27,12 @@ export class ProductsService {
 
     let products = await this.productModel.find().exec();
     if (search) {
-      products.filter(
+      products = products.filter(
         (product) =>
           product.name.includes(search) || product.description.includes(search),
       );
     }
+
     if (category) {
       products = products.filter(
         (product) => product.category.toLowerCase() === category.toLowerCase(),

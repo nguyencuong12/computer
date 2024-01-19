@@ -27,71 +27,6 @@ const LandingPage = () => {
 
   const ref = useRef(null);
 
-  const galleries: ProductInterface[] = [
-    {
-      id: uuidv4(),
-      title: "Mini PC ASRock DeskMini X300 - X300/B/BB/BOX/US",
-      price: "500000",
-      beforeDiscount: "100000",
-      image: bill.src,
-    },
-    {
-      id: uuidv4(),
-      title: "This is titel",
-      price: "500000",
-      beforeDiscount: "100000",
-      image: bill.src,
-    },
-    {
-      id: uuidv4(),
-      title: "This is titel",
-      price: "500000",
-      beforeDiscount: "100000",
-      image: bill.src,
-    },
-    {
-      id: uuidv4(),
-      title: "This is titel",
-      price: "500000",
-      beforeDiscount: "100000",
-      image: bill.src,
-    },
-    {
-      id: uuidv4(),
-      title: "This is titel",
-      price: "500000",
-      beforeDiscount: "100000",
-      image: bill.src,
-    },
-    {
-      id: uuidv4(),
-      title: "This is titel",
-      price: "500000",
-      beforeDiscount: "100000",
-      image: bill.src,
-    },
-    {
-      id: uuidv4(),
-      title: "This is titel",
-      price: "500000",
-      beforeDiscount: "100000",
-      image: bill.src,
-    },
-    {
-      id: uuidv4(),
-      title: "This is titel",
-      price: "500000",
-      beforeDiscount: "100000",
-      image: bill.src,
-    },
-    {
-      id: uuidv4(),
-      title: "This is titel",
-      price: "500000",
-      beforeDiscount: "100000",
-      image: bill.src,
-    },
-  ];
   const isInView = useInView(ref, { once: true });
   const slideControls = useAnimation();
   const item = {
@@ -112,9 +47,9 @@ const LandingPage = () => {
 
       <BannerVer2 />
       <div className={`${styles.boxWidth} m-auto`}>
-        <SectionWithGallery banner="" title="PC Máy bộ" categories={[]} galleries={galleries}></SectionWithGallery>
+        <SectionWithGallery banner="" title="PC Máy bộ" categories={"Cần câu cá"}></SectionWithGallery>
       </div>
-      <div className={`${styles.boxWidth} m-auto`}>
+      {/* <div className={`${styles.boxWidth} m-auto`}>
         <SectionWithGallery title="Ổ cứng SSD" categories={[]} galleries={galleries}></SectionWithGallery>
       </div>
       <div className={`${styles.boxWidth} m-auto`}>
@@ -122,7 +57,7 @@ const LandingPage = () => {
       </div>
       <div className={`${styles.boxWidth} m-auto`}>
         <SectionWithGallery title="Gaming Gear" categories={[]} galleries={galleries}></SectionWithGallery>
-      </div>
+      </div> */}
     </motion.div>
   );
 };
